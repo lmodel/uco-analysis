@@ -7,9 +7,9 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://lmodel.github.io/uco-analysis/EnclosingCompilation/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.1.2" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
 <title>Class: EnclosingCompilation - uco-analysis</title>
-<link href="../assets/stylesheets/main.7bf56d0a.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -203,54 +203,36 @@
     class EnclosingCompilation
       Compilation &lt;|-- EnclosingCompilation
 
-      EnclosingCompilation : createdBy
-        EnclosingCompilation &lt;.. string : createdBy
-      EnclosingCompilation : description
-        EnclosingCompilation &lt;.. string : description
-      EnclosingCompilation : externalReference
-        EnclosingCompilation &lt;.. string : externalReference
-      EnclosingCompilation : hasFacet
-        EnclosingCompilation &lt;.. string : hasFacet
-      EnclosingCompilation : modifiedTime
-        EnclosingCompilation &lt;.. datetime : modifiedTime
-      EnclosingCompilation : name
-        EnclosingCompilation &lt;.. string : name
-      EnclosingCompilation : object
-        EnclosingCompilation &lt;.. UcoObject : object
-      EnclosingCompilation : objectCreatedTime
-        EnclosingCompilation &lt;.. datetime : objectCreatedTime
-      EnclosingCompilation : objectMarking
-        EnclosingCompilation &lt;.. MarkingDefinitionAbstraction : objectMarking
-      EnclosingCompilation : specVersion
-        EnclosingCompilation &lt;.. string : specVersion
-      EnclosingCompilation : tag
-        EnclosingCompilation &lt;.. string : tag
-
 
       EnclosingCompilation &lt;|-- Bundle
 
+
       EnclosingCompilation : createdBy
-        EnclosingCompilation &lt;.. string : createdBy
+
       EnclosingCompilation : description
-        EnclosingCompilation &lt;.. string : description
+
       EnclosingCompilation : externalReference
-        EnclosingCompilation &lt;.. string : externalReference
+
       EnclosingCompilation : hasFacet
-        EnclosingCompilation &lt;.. string : hasFacet
+
       EnclosingCompilation : modifiedTime
-        EnclosingCompilation &lt;.. datetime : modifiedTime
+
       EnclosingCompilation : name
-        EnclosingCompilation &lt;.. string : name
+
       EnclosingCompilation : object
-        EnclosingCompilation &lt;.. UcoObject : object
+
+          EnclosingCompilation ..&gt; UcoObject : object
+
       EnclosingCompilation : objectCreatedTime
-        EnclosingCompilation &lt;.. datetime : objectCreatedTime
+
       EnclosingCompilation : objectMarking
-        EnclosingCompilation &lt;.. MarkingDefinitionAbstraction : objectMarking
+
+          EnclosingCompilation ..&gt; MarkingDefinitionAbstraction : objectMarking
+
       EnclosingCompilation : specVersion
-        EnclosingCompilation &lt;.. string : specVersion
+
       EnclosingCompilation : tag
-        EnclosingCompilation &lt;.. string : tag
+
 
 </div>
 <h2 id="inheritance">Inheritance</h2>
@@ -399,22 +381,6 @@ slot_usage:
     - ContextualCompilation
     - EnclosingCompilation
     - Action
-    - Annotation
-    - ContextualCompilation
-    - EnclosingCompilation
-    - Action
-    - Annotation
-    - ContextualCompilation
-    - EnclosingCompilation
-    - Action
-    - Annotation
-    - ContextualCompilation
-    - EnclosingCompilation
-    - Action
-    - Annotation
-    - ContextualCompilation
-    - EnclosingCompilation
-    - Action
     maximum_cardinality: 1
 
 </code></pre>
@@ -438,22 +404,6 @@ slot_usage:
     - ContextualCompilation
     - EnclosingCompilation
     - Action
-    - Annotation
-    - ContextualCompilation
-    - EnclosingCompilation
-    - Action
-    - Annotation
-    - ContextualCompilation
-    - EnclosingCompilation
-    - Action
-    - Annotation
-    - ContextualCompilation
-    - EnclosingCompilation
-    - Action
-    - Annotation
-    - ContextualCompilation
-    - EnclosingCompilation
-    - Action
     maximum_cardinality: 1
 attributes:
   object:
@@ -465,22 +415,6 @@ attributes:
     alias: object
     owner: EnclosingCompilation
     domain_of:
-    - Annotation
-    - ContextualCompilation
-    - EnclosingCompilation
-    - Action
-    - Annotation
-    - ContextualCompilation
-    - EnclosingCompilation
-    - Action
-    - Annotation
-    - ContextualCompilation
-    - EnclosingCompilation
-    - Action
-    - Annotation
-    - ContextualCompilation
-    - EnclosingCompilation
-    - Action
     - Annotation
     - ContextualCompilation
     - EnclosingCompilation
@@ -497,46 +431,6 @@ attributes:
     owner: EnclosingCompilation
     domain_of:
     - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     range: string
     maximum_cardinality: 0
   description:
@@ -549,46 +443,6 @@ attributes:
     owner: EnclosingCompilation
     domain_of:
     - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     range: string
   externalReference:
     name: externalReference
@@ -600,46 +454,6 @@ attributes:
     alias: externalReference
     owner: EnclosingCompilation
     domain_of:
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     - UcoObject
     range: string
     required: false
@@ -656,46 +470,6 @@ attributes:
     alias: hasFacet
     owner: EnclosingCompilation
     domain_of:
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     - UcoObject
     range: string
   modifiedTime:
@@ -714,46 +488,6 @@ attributes:
     owner: EnclosingCompilation
     domain_of:
     - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     range: datetime
   name:
     name: name
@@ -763,46 +497,6 @@ attributes:
     alias: name
     owner: EnclosingCompilation
     domain_of:
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     - UcoObject
     range: string
     maximum_cardinality: 1
@@ -817,46 +511,6 @@ attributes:
     owner: EnclosingCompilation
     domain_of:
     - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     range: MarkingDefinitionAbstraction
   objectCreatedTime:
     name: objectCreatedTime
@@ -868,46 +522,6 @@ attributes:
     alias: objectCreatedTime
     owner: EnclosingCompilation
     domain_of:
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     - UcoObject
     range: datetime
     maximum_cardinality: 1
@@ -921,46 +535,6 @@ attributes:
     owner: EnclosingCompilation
     domain_of:
     - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     range: string
     maximum_cardinality: 1
   tag:
@@ -972,46 +546,6 @@ attributes:
     alias: tag
     owner: EnclosingCompilation
     domain_of:
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     - UcoObject
     range: string
 
@@ -1041,6 +575,6 @@ attributes:
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.fc8c2696.min.js"></script>
+<script src="../assets/javascripts/bundle.efa0ade1.min.js"></script>
 <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script><script>mermaid.initialize({});</script></body>
 </html>

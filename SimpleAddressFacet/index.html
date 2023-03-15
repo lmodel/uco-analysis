@@ -7,9 +7,9 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://lmodel.github.io/uco-analysis/SimpleAddressFacet/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.1.2" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
 <title>Class: SimpleAddressFacet - uco-analysis</title>
-<link href="../assets/stylesheets/main.7bf56d0a.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -204,17 +204,17 @@
       Facet &lt;|-- SimpleAddressFacet
 
       SimpleAddressFacet : addressType
-        SimpleAddressFacet &lt;.. string : addressType
+
       SimpleAddressFacet : country
-        SimpleAddressFacet &lt;.. string : country
+
       SimpleAddressFacet : locality
-        SimpleAddressFacet &lt;.. string : locality
+
       SimpleAddressFacet : postalCode
-        SimpleAddressFacet &lt;.. string : postalCode
+
       SimpleAddressFacet : region
-        SimpleAddressFacet &lt;.. string : region
+
       SimpleAddressFacet : street
-        SimpleAddressFacet &lt;.. string : street
+
 
 </div>
 <h2 id="inheritance">Inheritance</h2>
@@ -325,36 +325,30 @@ slot_usage:
     name: addressType
     domain_of:
     - SimpleAddressFacet
-    - SimpleAddressFacet
     maximum_cardinality: 1
   country:
     name: country
     domain_of:
-    - SimpleAddressFacet
     - SimpleAddressFacet
     maximum_cardinality: 1
   locality:
     name: locality
     domain_of:
     - SimpleAddressFacet
-    - SimpleAddressFacet
     maximum_cardinality: 1
   postalCode:
     name: postalCode
     domain_of:
-    - SimpleAddressFacet
     - SimpleAddressFacet
     maximum_cardinality: 1
   region:
     name: region
     domain_of:
     - SimpleAddressFacet
-    - SimpleAddressFacet
     maximum_cardinality: 1
   street:
     name: street
     domain_of:
-    - SimpleAddressFacet
     - SimpleAddressFacet
     maximum_cardinality: 1
 
@@ -373,36 +367,30 @@ slot_usage:
     name: addressType
     domain_of:
     - SimpleAddressFacet
-    - SimpleAddressFacet
     maximum_cardinality: 1
   country:
     name: country
     domain_of:
-    - SimpleAddressFacet
     - SimpleAddressFacet
     maximum_cardinality: 1
   locality:
     name: locality
     domain_of:
     - SimpleAddressFacet
-    - SimpleAddressFacet
     maximum_cardinality: 1
   postalCode:
     name: postalCode
     domain_of:
-    - SimpleAddressFacet
     - SimpleAddressFacet
     maximum_cardinality: 1
   region:
     name: region
     domain_of:
     - SimpleAddressFacet
-    - SimpleAddressFacet
     maximum_cardinality: 1
   street:
     name: street
     domain_of:
-    - SimpleAddressFacet
     - SimpleAddressFacet
     maximum_cardinality: 1
 attributes:
@@ -415,7 +403,6 @@ attributes:
     owner: SimpleAddressFacet
     domain_of:
     - SimpleAddressFacet
-    - SimpleAddressFacet
     range: string
     maximum_cardinality: 1
   country:
@@ -426,7 +413,6 @@ attributes:
     alias: country
     owner: SimpleAddressFacet
     domain_of:
-    - SimpleAddressFacet
     - SimpleAddressFacet
     range: string
     maximum_cardinality: 1
@@ -439,7 +425,6 @@ attributes:
     owner: SimpleAddressFacet
     domain_of:
     - SimpleAddressFacet
-    - SimpleAddressFacet
     range: string
     maximum_cardinality: 1
   postalCode:
@@ -450,7 +435,6 @@ attributes:
     alias: postalCode
     owner: SimpleAddressFacet
     domain_of:
-    - SimpleAddressFacet
     - SimpleAddressFacet
     range: string
     maximum_cardinality: 1
@@ -463,7 +447,6 @@ attributes:
     owner: SimpleAddressFacet
     domain_of:
     - SimpleAddressFacet
-    - SimpleAddressFacet
     range: string
     maximum_cardinality: 1
   street:
@@ -474,7 +457,6 @@ attributes:
     alias: street
     owner: SimpleAddressFacet
     domain_of:
-    - SimpleAddressFacet
     - SimpleAddressFacet
     range: string
     maximum_cardinality: 1
@@ -505,6 +487,6 @@ attributes:
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.fc8c2696.min.js"></script>
+<script src="../assets/javascripts/bundle.efa0ade1.min.js"></script>
 <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script><script>mermaid.initialize({});</script></body>
 </html>

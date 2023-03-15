@@ -7,9 +7,9 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://lmodel.github.io/uco-analysis/Relationship/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.1.2" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
 <title>Class: Relationship - uco-analysis</title>
-<link href="../assets/stylesheets/main.7bf56d0a.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -204,37 +204,43 @@
       UcoObject &lt;|-- Relationship
 
       Relationship : createdBy
-        Relationship &lt;.. string : createdBy
+
       Relationship : description
-        Relationship &lt;.. string : description
+
       Relationship : endTime
-        Relationship &lt;.. datetime : endTime
+
       Relationship : externalReference
-        Relationship &lt;.. string : externalReference
+
       Relationship : hasFacet
-        Relationship &lt;.. string : hasFacet
+
       Relationship : isDirectional
-        Relationship &lt;.. boolean type : isDirectional
+
       Relationship : kindOfRelationship
-        Relationship &lt;.. string : kindOfRelationship
+
       Relationship : modifiedTime
-        Relationship &lt;.. datetime : modifiedTime
+
       Relationship : name
-        Relationship &lt;.. string : name
+
       Relationship : objectCreatedTime
-        Relationship &lt;.. datetime : objectCreatedTime
+
       Relationship : objectMarking
-        Relationship &lt;.. MarkingDefinitionAbstraction : objectMarking
+
+          Relationship ..&gt; MarkingDefinitionAbstraction : objectMarking
+
       Relationship : source
-        Relationship &lt;.. UcoObject : source
+
+          Relationship ..&gt; UcoObject : source
+
       Relationship : specVersion
-        Relationship &lt;.. string : specVersion
+
       Relationship : startTime
-        Relationship &lt;.. datetime : startTime
+
       Relationship : tag
-        Relationship &lt;.. string : tag
+
       Relationship : target
-        Relationship &lt;.. UcoObject : target
+
+          Relationship ..&gt; UcoObject : target
+
 
 </div>
 <h2 id="inheritance">Inheritance</h2>
@@ -412,13 +418,9 @@ slot_usage:
     - Relationship
     - Action
     - ActionLifecycle
-    - Relationship
-    - Action
-    - ActionLifecycle
   isDirectional:
     name: isDirectional
     domain_of:
-    - Relationship
     - Relationship
     required: true
     maximum_cardinality: 1
@@ -426,12 +428,10 @@ slot_usage:
     name: kindOfRelationship
     domain_of:
     - Relationship
-    - Relationship
     maximum_cardinality: 1
   target:
     name: target
     domain_of:
-    - Relationship
     - Relationship
     required: true
     maximum_cardinality: 1
@@ -440,15 +440,11 @@ slot_usage:
     multivalued: true
     domain_of:
     - Relationship
-    - Relationship
     required: true
   startTime:
     name: startTime
     multivalued: true
     domain_of:
-    - Relationship
-    - Action
-    - ActionLifecycle
     - Relationship
     - Action
     - ActionLifecycle
@@ -474,13 +470,9 @@ slot_usage:
     - Relationship
     - Action
     - ActionLifecycle
-    - Relationship
-    - Action
-    - ActionLifecycle
   isDirectional:
     name: isDirectional
     domain_of:
-    - Relationship
     - Relationship
     required: true
     maximum_cardinality: 1
@@ -488,12 +480,10 @@ slot_usage:
     name: kindOfRelationship
     domain_of:
     - Relationship
-    - Relationship
     maximum_cardinality: 1
   target:
     name: target
     domain_of:
-    - Relationship
     - Relationship
     required: true
     maximum_cardinality: 1
@@ -502,15 +492,11 @@ slot_usage:
     multivalued: true
     domain_of:
     - Relationship
-    - Relationship
     required: true
   startTime:
     name: startTime
     multivalued: true
     domain_of:
-    - Relationship
-    - Action
-    - ActionLifecycle
     - Relationship
     - Action
     - ActionLifecycle
@@ -527,9 +513,6 @@ attributes:
     - Relationship
     - Action
     - ActionLifecycle
-    - Relationship
-    - Action
-    - ActionLifecycle
     range: datetime
   isDirectional:
     name: isDirectional
@@ -540,7 +523,6 @@ attributes:
     alias: isDirectional
     owner: Relationship
     domain_of:
-    - Relationship
     - Relationship
     range: boolean type
     required: true
@@ -554,7 +536,6 @@ attributes:
     owner: Relationship
     domain_of:
     - Relationship
-    - Relationship
     range: string
     maximum_cardinality: 1
   source:
@@ -566,7 +547,6 @@ attributes:
     alias: source
     owner: Relationship
     domain_of:
-    - Relationship
     - Relationship
     range: UcoObject
     required: true
@@ -582,9 +562,6 @@ attributes:
     - Relationship
     - Action
     - ActionLifecycle
-    - Relationship
-    - Action
-    - ActionLifecycle
     range: datetime
   target:
     name: target
@@ -594,7 +571,6 @@ attributes:
     alias: target
     owner: Relationship
     domain_of:
-    - Relationship
     - Relationship
     range: UcoObject
     required: true
@@ -609,58 +585,6 @@ attributes:
     owner: Relationship
     domain_of:
     - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     range: string
     maximum_cardinality: 0
   description:
@@ -673,58 +597,6 @@ attributes:
     owner: Relationship
     domain_of:
     - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     range: string
   externalReference:
     name: externalReference
@@ -736,58 +608,6 @@ attributes:
     alias: externalReference
     owner: Relationship
     domain_of:
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     - UcoObject
     range: string
     required: false
@@ -804,58 +624,6 @@ attributes:
     alias: hasFacet
     owner: Relationship
     domain_of:
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     - UcoObject
     range: string
   modifiedTime:
@@ -874,58 +642,6 @@ attributes:
     owner: Relationship
     domain_of:
     - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     range: datetime
   name:
     name: name
@@ -935,58 +651,6 @@ attributes:
     alias: name
     owner: Relationship
     domain_of:
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     - UcoObject
     range: string
     maximum_cardinality: 1
@@ -1001,58 +665,6 @@ attributes:
     owner: Relationship
     domain_of:
     - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     range: MarkingDefinitionAbstraction
   objectCreatedTime:
     name: objectCreatedTime
@@ -1064,58 +676,6 @@ attributes:
     alias: objectCreatedTime
     owner: Relationship
     domain_of:
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     - UcoObject
     range: datetime
     maximum_cardinality: 1
@@ -1129,58 +689,6 @@ attributes:
     owner: Relationship
     domain_of:
     - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     range: string
     maximum_cardinality: 1
   tag:
@@ -1192,58 +700,6 @@ attributes:
     alias: tag
     owner: Relationship
     domain_of:
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     - UcoObject
     range: string
 
@@ -1273,6 +729,6 @@ attributes:
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.fc8c2696.min.js"></script>
+<script src="../assets/javascripts/bundle.efa0ade1.min.js"></script>
 <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script><script>mermaid.initialize({});</script></body>
 </html>

@@ -7,9 +7,9 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://lmodel.github.io/uco-analysis/Annotation/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.1.2" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
 <title>Class: Annotation - uco-analysis</title>
-<link href="../assets/stylesheets/main.7bf56d0a.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -204,29 +204,33 @@
       Assertion &lt;|-- Annotation
 
       Annotation : createdBy
-        Annotation &lt;.. string : createdBy
+
       Annotation : description
-        Annotation &lt;.. string : description
+
       Annotation : externalReference
-        Annotation &lt;.. string : externalReference
+
       Annotation : hasFacet
-        Annotation &lt;.. string : hasFacet
+
       Annotation : modifiedTime
-        Annotation &lt;.. datetime : modifiedTime
+
       Annotation : name
-        Annotation &lt;.. string : name
+
       Annotation : object
-        Annotation &lt;.. UcoObject : object
+
+          Annotation ..&gt; UcoObject : object
+
       Annotation : objectCreatedTime
-        Annotation &lt;.. datetime : objectCreatedTime
+
       Annotation : objectMarking
-        Annotation &lt;.. MarkingDefinitionAbstraction : objectMarking
+
+          Annotation ..&gt; MarkingDefinitionAbstraction : objectMarking
+
       Annotation : specVersion
-        Annotation &lt;.. string : specVersion
+
       Annotation : statement
-        Annotation &lt;.. string : statement
+
       Annotation : tag
-        Annotation &lt;.. string : tag
+
 
 </div>
 <h2 id="inheritance">Inheritance</h2>
@@ -379,10 +383,6 @@ slot_usage:
     - ContextualCompilation
     - EnclosingCompilation
     - Action
-    - Annotation
-    - ContextualCompilation
-    - EnclosingCompilation
-    - Action
     required: true
 
 </code></pre>
@@ -407,10 +407,6 @@ slot_usage:
     - ContextualCompilation
     - EnclosingCompilation
     - Action
-    - Annotation
-    - ContextualCompilation
-    - EnclosingCompilation
-    - Action
     required: true
 attributes:
   object:
@@ -422,10 +418,6 @@ attributes:
     alias: object
     owner: Annotation
     domain_of:
-    - Annotation
-    - ContextualCompilation
-    - EnclosingCompilation
-    - Action
     - Annotation
     - ContextualCompilation
     - EnclosingCompilation
@@ -442,11 +434,6 @@ attributes:
     owner: Annotation
     domain_of:
     - Assertion
-    - Assertion
-    - Assertion
-    - Assertion
-    - Assertion
-    - Assertion
     range: string
   createdBy:
     name: createdBy
@@ -457,32 +444,6 @@ attributes:
     alias: createdBy
     owner: Annotation
     domain_of:
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     - UcoObject
     range: string
     maximum_cardinality: 0
@@ -496,32 +457,6 @@ attributes:
     owner: Annotation
     domain_of:
     - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     range: string
   externalReference:
     name: externalReference
@@ -533,32 +468,6 @@ attributes:
     alias: externalReference
     owner: Annotation
     domain_of:
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     - UcoObject
     range: string
     required: false
@@ -575,32 +484,6 @@ attributes:
     alias: hasFacet
     owner: Annotation
     domain_of:
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     - UcoObject
     range: string
   modifiedTime:
@@ -619,32 +502,6 @@ attributes:
     owner: Annotation
     domain_of:
     - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     range: datetime
   name:
     name: name
@@ -654,32 +511,6 @@ attributes:
     alias: name
     owner: Annotation
     domain_of:
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     - UcoObject
     range: string
     maximum_cardinality: 1
@@ -694,32 +525,6 @@ attributes:
     owner: Annotation
     domain_of:
     - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     range: MarkingDefinitionAbstraction
   objectCreatedTime:
     name: objectCreatedTime
@@ -731,32 +536,6 @@ attributes:
     alias: objectCreatedTime
     owner: Annotation
     domain_of:
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     - UcoObject
     range: datetime
     maximum_cardinality: 1
@@ -770,32 +549,6 @@ attributes:
     owner: Annotation
     domain_of:
     - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     range: string
     maximum_cardinality: 1
   tag:
@@ -807,32 +560,6 @@ attributes:
     alias: tag
     owner: Annotation
     domain_of:
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     - UcoObject
     range: string
 
@@ -862,6 +589,6 @@ attributes:
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.fc8c2696.min.js"></script>
+<script src="../assets/javascripts/bundle.efa0ade1.min.js"></script>
 <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script><script>mermaid.initialize({});</script></body>
 </html>

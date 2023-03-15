@@ -7,9 +7,9 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://lmodel.github.io/uco-analysis/ActionPattern/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.1.2" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
 <title>Class: ActionPattern - uco-analysis</title>
-<link href="../assets/stylesheets/main.7bf56d0a.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -205,51 +205,73 @@
       Action &lt;|-- ActionPattern
 
       ActionPattern : actionCount
-        ActionPattern &lt;.. non negative integer type : actionCount
+
       ActionPattern : actionStatus
-        ActionPattern &lt;.. ActionStatusTypeEnum : actionStatus
+
+          ActionPattern ..&gt; ActionStatusTypeEnum : actionStatus
+
       ActionPattern : createdBy
-        ActionPattern &lt;.. string : createdBy
+
       ActionPattern : description
-        ActionPattern &lt;.. string : description
+
       ActionPattern : endTime
-        ActionPattern &lt;.. datetime : endTime
+
       ActionPattern : environment
-        ActionPattern &lt;.. UcoObject : environment
+
+          ActionPattern ..&gt; UcoObject : environment
+
       ActionPattern : error
-        ActionPattern &lt;.. UcoObject : error
+
+          ActionPattern ..&gt; UcoObject : error
+
       ActionPattern : externalReference
-        ActionPattern &lt;.. string : externalReference
+
       ActionPattern : hasFacet
-        ActionPattern &lt;.. string : hasFacet
+
       ActionPattern : instrument
-        ActionPattern &lt;.. UcoObject : instrument
+
+          ActionPattern ..&gt; UcoObject : instrument
+
       ActionPattern : location
-        ActionPattern &lt;.. Location : location
+
+          ActionPattern ..&gt; Location : location
+
       ActionPattern : modifiedTime
-        ActionPattern &lt;.. datetime : modifiedTime
+
       ActionPattern : name
-        ActionPattern &lt;.. string : name
+
       ActionPattern : object
-        ActionPattern &lt;.. UcoObject : object
+
+          ActionPattern ..&gt; UcoObject : object
+
       ActionPattern : objectCreatedTime
-        ActionPattern &lt;.. datetime : objectCreatedTime
+
       ActionPattern : objectMarking
-        ActionPattern &lt;.. MarkingDefinitionAbstraction : objectMarking
+
+          ActionPattern ..&gt; MarkingDefinitionAbstraction : objectMarking
+
       ActionPattern : participant
-        ActionPattern &lt;.. UcoObject : participant
+
+          ActionPattern ..&gt; UcoObject : participant
+
       ActionPattern : performer
-        ActionPattern &lt;.. UcoObject : performer
+
+          ActionPattern ..&gt; UcoObject : performer
+
       ActionPattern : result
-        ActionPattern &lt;.. UcoObject : result
+
+          ActionPattern ..&gt; UcoObject : result
+
       ActionPattern : specVersion
-        ActionPattern &lt;.. string : specVersion
+
       ActionPattern : startTime
-        ActionPattern &lt;.. datetime : startTime
+
       ActionPattern : subaction
-        ActionPattern &lt;.. Action : subaction
+
+          ActionPattern ..&gt; Action : subaction
+
       ActionPattern : tag
-        ActionPattern &lt;.. string : tag
+
 
 </div>
 <h2 id="inheritance">Inheritance</h2>
@@ -477,14 +499,6 @@ attributes:
     owner: ActionPattern
     domain_of:
     - Action
-    - Action
-    - Action
-    - Action
-    - Action
-    - Action
-    - Action
-    - Action
-    - Action
     range: Action
   environment:
     name: environment
@@ -518,16 +532,6 @@ attributes:
     domain_of:
     - Action
     - ActionLifecycle
-    - Action
-    - ActionLifecycle
-    - Action
-    - ActionLifecycle
-    - Action
-    - ActionLifecycle
-    - Action
-    - ActionLifecycle
-    - Action
-    - ActionLifecycle
     range: UcoObject
   instrument:
     name: instrument
@@ -538,14 +542,6 @@ attributes:
     alias: instrument
     owner: ActionPattern
     domain_of:
-    - Action
-    - Action
-    - Action
-    - Action
-    - Action
-    - Action
-    - Action
-    - Action
     - Action
     range: UcoObject
   object:
@@ -561,38 +557,6 @@ attributes:
     - ContextualCompilation
     - EnclosingCompilation
     - Action
-    - Annotation
-    - ContextualCompilation
-    - EnclosingCompilation
-    - Action
-    - Annotation
-    - ContextualCompilation
-    - EnclosingCompilation
-    - Action
-    - Annotation
-    - ContextualCompilation
-    - EnclosingCompilation
-    - Action
-    - Annotation
-    - ContextualCompilation
-    - EnclosingCompilation
-    - Action
-    - Annotation
-    - ContextualCompilation
-    - EnclosingCompilation
-    - Action
-    - Annotation
-    - ContextualCompilation
-    - EnclosingCompilation
-    - Action
-    - Annotation
-    - ContextualCompilation
-    - EnclosingCompilation
-    - Action
-    - Annotation
-    - ContextualCompilation
-    - EnclosingCompilation
-    - Action
     range: UcoObject
   participant:
     name: participant
@@ -603,14 +567,6 @@ attributes:
     alias: participant
     owner: ActionPattern
     domain_of:
-    - Action
-    - Action
-    - Action
-    - Action
-    - Action
-    - Action
-    - Action
-    - Action
     - Action
     range: UcoObject
   result:
@@ -623,14 +579,6 @@ attributes:
     owner: ActionPattern
     domain_of:
     - Action
-    - Action
-    - Action
-    - Action
-    - Action
-    - Action
-    - Action
-    - Action
-    - Action
     range: UcoObject
   location:
     name: location
@@ -641,14 +589,6 @@ attributes:
     alias: location
     owner: ActionPattern
     domain_of:
-    - Action
-    - Action
-    - Action
-    - Action
-    - Action
-    - Action
-    - Action
-    - Action
     - Action
     range: Location
   endTime:
@@ -662,21 +602,6 @@ attributes:
     - Relationship
     - Action
     - ActionLifecycle
-    - Relationship
-    - Action
-    - ActionLifecycle
-    - Relationship
-    - Action
-    - ActionLifecycle
-    - Relationship
-    - Action
-    - ActionLifecycle
-    - Relationship
-    - Action
-    - ActionLifecycle
-    - Relationship
-    - Action
-    - ActionLifecycle
     range: datetime
   startTime:
     name: startTime
@@ -686,21 +611,6 @@ attributes:
     alias: startTime
     owner: ActionPattern
     domain_of:
-    - Relationship
-    - Action
-    - ActionLifecycle
-    - Relationship
-    - Action
-    - ActionLifecycle
-    - Relationship
-    - Action
-    - ActionLifecycle
-    - Relationship
-    - Action
-    - ActionLifecycle
-    - Relationship
-    - Action
-    - ActionLifecycle
     - Relationship
     - Action
     - ActionLifecycle
@@ -737,65 +647,6 @@ attributes:
     owner: ActionPattern
     domain_of:
     - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     range: string
     maximum_cardinality: 0
   description:
@@ -808,65 +659,6 @@ attributes:
     owner: ActionPattern
     domain_of:
     - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     range: string
   externalReference:
     name: externalReference
@@ -878,65 +670,6 @@ attributes:
     alias: externalReference
     owner: ActionPattern
     domain_of:
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     - UcoObject
     range: string
     required: false
@@ -953,65 +686,6 @@ attributes:
     alias: hasFacet
     owner: ActionPattern
     domain_of:
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     - UcoObject
     range: string
   modifiedTime:
@@ -1030,65 +704,6 @@ attributes:
     owner: ActionPattern
     domain_of:
     - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     range: datetime
   name:
     name: name
@@ -1098,65 +713,6 @@ attributes:
     alias: name
     owner: ActionPattern
     domain_of:
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     - UcoObject
     range: string
     maximum_cardinality: 1
@@ -1171,65 +727,6 @@ attributes:
     owner: ActionPattern
     domain_of:
     - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     range: MarkingDefinitionAbstraction
   objectCreatedTime:
     name: objectCreatedTime
@@ -1241,65 +738,6 @@ attributes:
     alias: objectCreatedTime
     owner: ActionPattern
     domain_of:
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     - UcoObject
     range: datetime
     maximum_cardinality: 1
@@ -1313,65 +751,6 @@ attributes:
     owner: ActionPattern
     domain_of:
     - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     range: string
     maximum_cardinality: 1
   tag:
@@ -1383,65 +762,6 @@ attributes:
     alias: tag
     owner: ActionPattern
     domain_of:
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
-    - UcoObject
     - UcoObject
     range: string
 
@@ -1471,6 +791,6 @@ attributes:
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.fc8c2696.min.js"></script>
+<script src="../assets/javascripts/bundle.efa0ade1.min.js"></script>
 <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script><script>mermaid.initialize({});</script></body>
 </html>
