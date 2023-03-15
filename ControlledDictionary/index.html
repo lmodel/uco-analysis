@@ -198,7 +198,7 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-controlleddictionary">Class: ControlledDictionary</h1>
 <p><em>"A controlled dictionary is a list of (term/key, value) pairs where each term/key exists no more than once and is constrained to an explicitly defined set of values."</em></p>
-<p>URI: <a href="https://w3id.org/lmodel/uco-analysis/ControlledDictionary">analysis:ControlledDictionary</a></p>
+<p>URI: <a href="types:ControlledDictionary">types:ControlledDictionary</a></p>
 <div class="mermaid"> classDiagram
     class ControlledDictionary
       Dictionary &lt;|-- ControlledDictionary
@@ -244,7 +244,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/linkmodel/uco-analysis</li>
+<li>from schema: https://w3id.org/lmodel/uco-types</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -257,11 +257,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>analysis:ControlledDictionary</td>
+<td>types:ControlledDictionary</td>
 </tr>
 <tr>
 <td>native</td>
-<td>analysis:ControlledDictionary</td>
+<td>types:ControlledDictionary</td>
 </tr>
 </tbody>
 </table>
@@ -273,8 +273,7 @@
 description: '"A controlled dictionary is a list of (term/key, value) pairs where
   each term/key exists no more than once and is constrained to an explicitly defined
   set of values."'
-from_schema: https://w3id.org/linkmodel/uco-analysis
-rank: 1000
+from_schema: https://w3id.org/lmodel/uco-types
 is_a: Dictionary
 slots:
 - entry
@@ -294,8 +293,7 @@ slot_usage:
 description: '"A controlled dictionary is a list of (term/key, value) pairs where
   each term/key exists no more than once and is constrained to an explicitly defined
   set of values."'
-from_schema: https://w3id.org/linkmodel/uco-analysis
-rank: 1000
+from_schema: https://w3id.org/lmodel/uco-types
 is_a: Dictionary
 slot_usage:
   entry:
@@ -308,8 +306,7 @@ attributes:
   entry:
     name: entry
     description: '"A dictionary entry."'
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/lmodel/uco-types
     multivalued: true
     alias: entry
     owner: ControlledDictionary

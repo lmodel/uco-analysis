@@ -198,26 +198,42 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-attributedname">Class: AttributedName</h1>
 <p><em>An attributed name is a name of an entity issued by some attributed naming authority.</em></p>
-<p>URI: <a href="https://w3id.org/lmodel/uco-analysis/AttributedName">analysis:AttributedName</a></p>
+<p>URI: <a href="core:AttributedName">core:AttributedName</a></p>
 <div class="mermaid"> classDiagram
     class AttributedName
       UcoObject &lt;|-- AttributedName
 
       AttributedName : createdBy
 
+          AttributedName ..&gt; string : createdBy
+
       AttributedName : description
+
+          AttributedName ..&gt; string : description
 
       AttributedName : externalReference
 
+          AttributedName ..&gt; string : externalReference
+
       AttributedName : hasFacet
+
+          AttributedName ..&gt; string : hasFacet
 
       AttributedName : modifiedTime
 
+          AttributedName ..&gt; datetime : modifiedTime
+
       AttributedName : name
+
+          AttributedName ..&gt; string : name
 
       AttributedName : namingAuthority
 
+          AttributedName ..&gt; string : namingAuthority
+
       AttributedName : objectCreatedTime
+
+          AttributedName ..&gt; datetime : objectCreatedTime
 
       AttributedName : objectMarking
 
@@ -225,7 +241,11 @@
 
       AttributedName : specVersion
 
+          AttributedName ..&gt; string : specVersion
+
       AttributedName : tag
+
+          AttributedName ..&gt; string : tag
 
 
 </div>
@@ -252,43 +272,43 @@
 <tbody>
 <tr>
 <td><a href="../namingAuthority/">namingAuthority</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
 <td>Specifies the naming authority that issued the name of the entity</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../createdBy/">createdBy</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
 <td>The identity that created a characterization of a concept</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../description/">description</a></td>
-<td>0..* <br/> <a href="../String/">String</a></td>
+<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
 <td>A description of a particular concept characterization</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../externalReference/">externalReference</a></td>
-<td>0..* <br/> <a href="../String/">String</a></td>
+<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
 <td>Specifies a reference to a resource outside of the UCO</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../hasFacet/">hasFacet</a></td>
-<td>0..* <br/> <a href="../String/">String</a></td>
+<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
 <td>Further sets of properties characterizing a concept based on the particular c...</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../modifiedTime/">modifiedTime</a></td>
-<td>0..* <br/> <a href="../Datetime/">Datetime</a></td>
+<td>0..* <br/> <a href="xsd:dateTime">xsd:dateTime</a></td>
 <td>Specifies the time that this particular version of the object was modified</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../name/">name</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
 <td>The name of a particular concept characterization</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
@@ -300,19 +320,19 @@
 </tr>
 <tr>
 <td><a href="../objectCreatedTime/">objectCreatedTime</a></td>
-<td>0..1 <br/> <a href="../Datetime/">Datetime</a></td>
+<td>0..1 <br/> <a href="xsd:dateTime">xsd:dateTime</a></td>
 <td>The time at which a characterization of a concept is created</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../specVersion/">specVersion</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
 <td>The version of UCO ontology or subontology specification used to characterize...</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../tag/">tag</a></td>
-<td>0..* <br/> <a href="../String/">String</a></td>
+<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
 <td>A generic tag/label</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
@@ -321,7 +341,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/linkmodel/uco-analysis</li>
+<li>from schema: https://w3id.org/lmodel/uco-core</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -334,11 +354,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>analysis:AttributedName</td>
+<td>core:AttributedName</td>
 </tr>
 <tr>
 <td>native</td>
-<td>analysis:AttributedName</td>
+<td>core:AttributedName</td>
 </tr>
 <tr>
 <td>related</td>
@@ -353,12 +373,11 @@
 <pre><code class="language-yaml">name: AttributedName
 description: An attributed name is a name of an entity issued by some attributed naming
   authority.
-from_schema: https://w3id.org/linkmodel/uco-analysis
+from_schema: https://w3id.org/lmodel/uco-core
 related_mappings:
 - wikidata:Q758251
 - wikidata:Q32635
 - wikidata:Q5508349
-rank: 1000
 is_a: UcoObject
 slots:
 - namingAuthority
@@ -376,12 +395,11 @@ slot_usage:
 <pre><code class="language-yaml">name: AttributedName
 description: An attributed name is a name of an entity issued by some attributed naming
   authority.
-from_schema: https://w3id.org/linkmodel/uco-analysis
+from_schema: https://w3id.org/lmodel/uco-core
 related_mappings:
 - wikidata:Q758251
 - wikidata:Q32635
 - wikidata:Q5508349
-rank: 1000
 is_a: UcoObject
 slot_usage:
   namingAuthority:
@@ -393,8 +411,7 @@ attributes:
   namingAuthority:
     name: namingAuthority
     description: Specifies the naming authority that issued the name of the entity.
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/lmodel/uco-core
     alias: namingAuthority
     owner: AttributedName
     domain_of:
@@ -404,8 +421,7 @@ attributes:
   createdBy:
     name: createdBy
     description: The identity that created a characterization of a concept.
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/lmodel/uco-core
     domain: IdentityAbstraction
     alias: createdBy
     owner: AttributedName
@@ -416,8 +432,7 @@ attributes:
   description:
     name: description
     description: A description of a particular concept characterization.
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/lmodel/uco-core
     multivalued: true
     alias: description
     owner: AttributedName
@@ -427,8 +442,7 @@ attributes:
   externalReference:
     name: externalReference
     description: Specifies a reference to a resource outside of the UCO.
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/lmodel/uco-core
     domain: ExternalReference
     multivalued: true
     alias: externalReference
@@ -443,8 +457,7 @@ attributes:
     description: Further sets of properties characterizing a concept based on the
       particular context of the class and of the particular instance of the concept
       being characterized.
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/lmodel/uco-core
     domain: Facet
     multivalued: true
     alias: hasFacet
@@ -461,8 +474,7 @@ attributes:
       property. Object creators MUST update the modified property when creating a
       new version of an object. The modified timestamp MUST be precise to the nearest
       millisecond (exactly three digits after the decimal place in seconds).
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/lmodel/uco-core
     multivalued: true
     alias: modifiedTime
     owner: AttributedName
@@ -472,8 +484,7 @@ attributes:
   name:
     name: name
     description: The name of a particular concept characterization.
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/lmodel/uco-core
     alias: name
     owner: AttributedName
     domain_of:
@@ -484,8 +495,7 @@ attributes:
     name: objectMarking
     description: Marking definitions to be applied to a particular concept characterization
       in its entirety.
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/lmodel/uco-core
     multivalued: true
     alias: objectMarking
     owner: AttributedName
@@ -497,8 +507,7 @@ attributes:
     description: The time at which a characterization of a concept is created. This
       time pertains to the time of creating the record object, and is not an intrinsic
       characteristic of the concept.
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/lmodel/uco-core
     alias: objectCreatedTime
     owner: AttributedName
     domain_of:
@@ -509,8 +518,7 @@ attributes:
     name: specVersion
     description: The version of UCO ontology or subontology specification used to
       characterize a concept.
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/lmodel/uco-core
     alias: specVersion
     owner: AttributedName
     domain_of:
@@ -520,8 +528,7 @@ attributes:
   tag:
     name: tag
     description: A generic tag/label.
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/lmodel/uco-core
     multivalued: true
     alias: tag
     owner: AttributedName
