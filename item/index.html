@@ -340,7 +340,7 @@
 
 <h1 id="slot-item">Slot: item</h1>
 <p><em>The link to every item of the bag</em></p>
-<p>URI: <a href="collections:item">collections:item</a></p>
+<p>URI: <a href="https://w3id.org/lmodel/uco-analysis/item">analysis:item</a></p>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><strong>item</strong><ul>
@@ -399,18 +399,19 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/lmodel/collections</li>
+<li>from schema: https://w3id.org/linkmodel/uco-analysis</li>
 </ul>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
 <pre><code class="language-yaml">name: item
 description: The link to every item of the bag
-from_schema: https://w3id.org/lmodel/collections
+from_schema: https://w3id.org/linkmodel/uco-analysis
 aliases:
 - has item
 exact_mappings:
 - co:item
+rank: 1000
 mixin: true
 domain: Bag
 alias: item

@@ -203,7 +203,7 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-dictionaryentry">Class: DictionaryEntry</h1>
 <p><em>"A dictionary entry is a single (term/key, value) pair."</em></p>
-<p>URI: <a href="types:DictionaryEntry">types:DictionaryEntry</a></p>
+<p>URI: <a href="https://w3id.org/lmodel/uco-analysis/DictionaryEntry">analysis:DictionaryEntry</a></p>
 <div class="mermaid"> classDiagram
     class DictionaryEntry
       UcoInherentCharacterizationThing &lt;|-- DictionaryEntry
@@ -214,11 +214,7 @@
 
       DictionaryEntry : key
 
-          DictionaryEntry ..&gt; string : key
-
       DictionaryEntry : value
-
-          DictionaryEntry ..&gt; string : value
 
 
 </div>
@@ -248,13 +244,13 @@
 <tbody>
 <tr>
 <td><a href="../key/">key</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>"A key property of a single dictionary entry</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../value/">value</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>A string value</td>
 <td>direct</td>
 </tr>
@@ -288,7 +284,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/lmodel/uco-types</li>
+<li>from schema: https://w3id.org/linkmodel/uco-analysis</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -301,11 +297,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>types:DictionaryEntry</td>
+<td>analysis:DictionaryEntry</td>
 </tr>
 <tr>
 <td>native</td>
-<td>types:DictionaryEntry</td>
+<td>analysis:DictionaryEntry</td>
 </tr>
 <tr>
 <td>exact</td>
@@ -319,9 +315,10 @@
 <details>
 <pre><code class="language-yaml">name: DictionaryEntry
 description: '"A dictionary entry is a single (term/key, value) pair."'
-from_schema: https://w3id.org/lmodel/uco-types
+from_schema: https://w3id.org/linkmodel/uco-analysis
 exact_mappings:
 - wikidata:Q4818718
+rank: 1000
 is_a: UcoInherentCharacterizationThing
 slots:
 - key
@@ -350,9 +347,10 @@ slot_usage:
 <details>
 <pre><code class="language-yaml">name: DictionaryEntry
 description: '"A dictionary entry is a single (term/key, value) pair."'
-from_schema: https://w3id.org/lmodel/uco-types
+from_schema: https://w3id.org/linkmodel/uco-analysis
 exact_mappings:
 - wikidata:Q4818718
+rank: 1000
 is_a: UcoInherentCharacterizationThing
 slot_usage:
   key:
@@ -375,7 +373,8 @@ attributes:
   key:
     name: key
     description: '"A key property of a single dictionary entry."'
-    from_schema: https://w3id.org/lmodel/uco-types
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: key
     owner: DictionaryEntry
     domain_of:
@@ -387,7 +386,8 @@ attributes:
   value:
     name: value
     description: A string value.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: value
     owner: DictionaryEntry
     domain_of:

@@ -198,26 +198,18 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-gpscoordinatesfacet">Class: GPSCoordinatesFacet</h1>
 <p><em>A GPS coordinates facet is a grouping of characteristics unique to the expression of quantified dilution of precision (DOP) for an asserted set of geolocation coordinates typically associated with satellite navigation such as the Global Positioning System (GPS).</em></p>
-<p>URI: <a href="location:GPSCoordinatesFacet">location:GPSCoordinatesFacet</a></p>
+<p>URI: <a href="https://w3id.org/lmodel/uco-analysis/GPSCoordinatesFacet">analysis:GPSCoordinatesFacet</a></p>
 <div class="mermaid"> classDiagram
     class GPSCoordinatesFacet
       Facet &lt;|-- GPSCoordinatesFacet
 
       GPSCoordinatesFacet : hdop
 
-          GPSCoordinatesFacet ..&gt; decimal type : hdop
-
       GPSCoordinatesFacet : pdop
-
-          GPSCoordinatesFacet ..&gt; decimal type : pdop
 
       GPSCoordinatesFacet : tdop
 
-          GPSCoordinatesFacet ..&gt; decimal type : tdop
-
       GPSCoordinatesFacet : vdop
-
-          GPSCoordinatesFacet ..&gt; decimal type : vdop
 
 
 </div>
@@ -274,7 +266,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/lmodel/ucolink-location</li>
+<li>from schema: https://w3id.org/linkmodel/uco-analysis</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -287,11 +279,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>location:GPSCoordinatesFacet</td>
+<td>analysis:GPSCoordinatesFacet</td>
 </tr>
 <tr>
 <td>native</td>
-<td>location:GPSCoordinatesFacet</td>
+<td>analysis:GPSCoordinatesFacet</td>
 </tr>
 </tbody>
 </table>
@@ -304,7 +296,8 @@ description: A GPS coordinates facet is a grouping of characteristics unique to 
   expression of quantified dilution of precision (DOP) for an asserted set of geolocation
   coordinates typically associated with satellite navigation such as the Global Positioning
   System (GPS).
-from_schema: https://w3id.org/lmodel/ucolink-location
+from_schema: https://w3id.org/linkmodel/uco-analysis
+rank: 1000
 is_a: Facet
 slots:
 - hdop
@@ -342,7 +335,8 @@ description: A GPS coordinates facet is a grouping of characteristics unique to 
   expression of quantified dilution of precision (DOP) for an asserted set of geolocation
   coordinates typically associated with satellite navigation such as the Global Positioning
   System (GPS).
-from_schema: https://w3id.org/lmodel/ucolink-location
+from_schema: https://w3id.org/linkmodel/uco-analysis
+rank: 1000
 is_a: Facet
 slot_usage:
   hdop:
@@ -369,7 +363,8 @@ attributes:
   hdop:
     name: hdop
     description: The horizontal dilution of precision of the GPS location.
-    from_schema: https://w3id.org/lmodel/ucolink-location
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: hdop
     owner: GPSCoordinatesFacet
     domain_of:
@@ -379,7 +374,8 @@ attributes:
   pdop:
     name: pdop
     description: The positional (3D) dilution of precision of the GPS location.
-    from_schema: https://w3id.org/lmodel/ucolink-location
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: pdop
     owner: GPSCoordinatesFacet
     domain_of:
@@ -389,7 +385,8 @@ attributes:
   tdop:
     name: tdop
     description: The temporal dilution of precision of the GPS location.
-    from_schema: https://w3id.org/lmodel/ucolink-location
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: tdop
     owner: GPSCoordinatesFacet
     domain_of:
@@ -399,7 +396,8 @@ attributes:
   vdop:
     name: vdop
     description: The vertical dilution of precision of the GPS location.
-    from_schema: https://w3id.org/lmodel/ucolink-location
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: vdop
     owner: GPSCoordinatesFacet
     domain_of:

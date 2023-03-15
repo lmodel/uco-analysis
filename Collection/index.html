@@ -208,7 +208,7 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-collection">Class: Collection</h1>
 <p><em>A group of objects that can be considered as a whole.</em></p>
-<p>URI: <a href="collections:Collection">collections:Collection</a></p>
+<p>URI: <a href="https://w3id.org/lmodel/uco-analysis/Collection">analysis:Collection</a></p>
 <div class="mermaid"> classDiagram
     class Collection
       Thing &lt;|-- Collection
@@ -223,8 +223,6 @@
           Collection ..&gt; Thing : element
 
       Collection : size
-
-          Collection ..&gt; positive integer : size
 
 
 </div>
@@ -344,7 +342,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/lmodel/collections</li>
+<li>from schema: https://w3id.org/linkmodel/uco-analysis</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -357,11 +355,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>collections:Collection</td>
+<td>analysis:Collection</td>
 </tr>
 <tr>
 <td>native</td>
-<td>collections:Collection</td>
+<td>analysis:Collection</td>
 </tr>
 <tr>
 <td>exact</td>
@@ -375,13 +373,14 @@
 <details>
 <pre><code class="language-yaml">name: Collection
 description: A group of objects that can be considered as a whole.
-from_schema: https://w3id.org/lmodel/collections
+from_schema: https://w3id.org/linkmodel/uco-analysis
 aliases:
 - collection
 exact_mappings:
 - co:Collection
 - NCIT:C45261
 - wikidata:Q59294700
+rank: 1000
 is_a: Thing
 slots:
 - element
@@ -411,13 +410,14 @@ disjoint_with:
 <details>
 <pre><code class="language-yaml">name: Collection
 description: A group of objects that can be considered as a whole.
-from_schema: https://w3id.org/lmodel/collections
+from_schema: https://w3id.org/linkmodel/uco-analysis
 aliases:
 - collection
 exact_mappings:
 - co:Collection
 - NCIT:C45261
 - wikidata:Q59294700
+rank: 1000
 is_a: Thing
 slot_usage:
   element:
@@ -443,7 +443,8 @@ attributes:
         tag: owl
         value: allValuesFrom
     description: The link to the members of a collection
-    from_schema: https://w3id.org/lmodel/collections
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     mixin: true
     domain: Collection
     multivalued: true
@@ -455,7 +456,8 @@ attributes:
   size:
     name: size
     description: The number of item belonging to a collection.
-    from_schema: https://w3id.org/lmodel/collections
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     domain: Collection
     alias: size
     owner: Collection

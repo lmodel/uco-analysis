@@ -198,50 +198,30 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-relationship">Class: Relationship</h1>
 <p><em>A relationship is a grouping of characteristics unique to an assertion that one or more objects are related to another object in some way.</em></p>
-<p>URI: <a href="core:Relationship">core:Relationship</a></p>
+<p>URI: <a href="https://w3id.org/lmodel/uco-analysis/Relationship">analysis:Relationship</a></p>
 <div class="mermaid"> classDiagram
     class Relationship
       UcoObject &lt;|-- Relationship
 
       Relationship : createdBy
 
-          Relationship ..&gt; string : createdBy
-
       Relationship : description
-
-          Relationship ..&gt; string : description
 
       Relationship : endTime
 
-          Relationship ..&gt; datetime : endTime
-
       Relationship : externalReference
-
-          Relationship ..&gt; string : externalReference
 
       Relationship : hasFacet
 
-          Relationship ..&gt; string : hasFacet
-
       Relationship : isDirectional
-
-          Relationship ..&gt; boolean type : isDirectional
 
       Relationship : kindOfRelationship
 
-          Relationship ..&gt; string : kindOfRelationship
-
       Relationship : modifiedTime
-
-          Relationship ..&gt; datetime : modifiedTime
 
       Relationship : name
 
-          Relationship ..&gt; string : name
-
       Relationship : objectCreatedTime
-
-          Relationship ..&gt; datetime : objectCreatedTime
 
       Relationship : objectMarking
 
@@ -253,15 +233,9 @@
 
       Relationship : specVersion
 
-          Relationship ..&gt; string : specVersion
-
       Relationship : startTime
 
-          Relationship ..&gt; datetime : startTime
-
       Relationship : tag
-
-          Relationship ..&gt; string : tag
 
       Relationship : target
 
@@ -292,7 +266,7 @@
 <tbody>
 <tr>
 <td><a href="../endTime/">endTime</a></td>
-<td>0..1 <br/> <a href="xsd:dateTime">xsd:dateTime</a></td>
+<td>0..1 <br/> <a href="../Datetime/">Datetime</a></td>
 <td>The ending time of a time range</td>
 <td>direct</td>
 </tr>
@@ -304,7 +278,7 @@
 </tr>
 <tr>
 <td><a href="../kindOfRelationship/">kindOfRelationship</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>A characterization of the nature of a relationship between objects</td>
 <td>direct</td>
 </tr>
@@ -316,7 +290,7 @@
 </tr>
 <tr>
 <td><a href="../startTime/">startTime</a></td>
-<td>0..1 <br/> <a href="xsd:dateTime">xsd:dateTime</a></td>
+<td>0..1 <br/> <a href="../Datetime/">Datetime</a></td>
 <td>The initial time of a time range</td>
 <td>direct</td>
 </tr>
@@ -328,37 +302,37 @@
 </tr>
 <tr>
 <td><a href="../createdBy/">createdBy</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The identity that created a characterization of a concept</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../description/">description</a></td>
-<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..* <br/> <a href="../String/">String</a></td>
 <td>A description of a particular concept characterization</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../externalReference/">externalReference</a></td>
-<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..* <br/> <a href="../String/">String</a></td>
 <td>Specifies a reference to a resource outside of the UCO</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../hasFacet/">hasFacet</a></td>
-<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..* <br/> <a href="../String/">String</a></td>
 <td>Further sets of properties characterizing a concept based on the particular c...</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../modifiedTime/">modifiedTime</a></td>
-<td>0..* <br/> <a href="xsd:dateTime">xsd:dateTime</a></td>
+<td>0..* <br/> <a href="../Datetime/">Datetime</a></td>
 <td>Specifies the time that this particular version of the object was modified</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../name/">name</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The name of a particular concept characterization</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
@@ -370,19 +344,19 @@
 </tr>
 <tr>
 <td><a href="../objectCreatedTime/">objectCreatedTime</a></td>
-<td>0..1 <br/> <a href="xsd:dateTime">xsd:dateTime</a></td>
+<td>0..1 <br/> <a href="../Datetime/">Datetime</a></td>
 <td>The time at which a characterization of a concept is created</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../specVersion/">specVersion</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The version of UCO ontology or subontology specification used to characterize...</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../tag/">tag</a></td>
-<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..* <br/> <a href="../String/">String</a></td>
 <td>A generic tag/label</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
@@ -391,7 +365,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/lmodel/uco-core</li>
+<li>from schema: https://w3id.org/linkmodel/uco-analysis</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -404,11 +378,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>core:Relationship</td>
+<td>analysis:Relationship</td>
 </tr>
 <tr>
 <td>native</td>
-<td>core:Relationship</td>
+<td>analysis:Relationship</td>
 </tr>
 <tr>
 <td>exact</td>
@@ -423,10 +397,11 @@
 <pre><code class="language-yaml">name: Relationship
 description: A relationship is a grouping of characteristics unique to an assertion
   that one or more objects are related to another object in some way.
-from_schema: https://w3id.org/lmodel/uco-core
+from_schema: https://w3id.org/linkmodel/uco-analysis
 exact_mappings:
 - NCIT:C25648
 - wikidata:Q930933
+rank: 1000
 is_a: UcoObject
 slots:
 - endTime
@@ -481,10 +456,11 @@ slot_usage:
 <pre><code class="language-yaml">name: Relationship
 description: A relationship is a grouping of characteristics unique to an assertion
   that one or more objects are related to another object in some way.
-from_schema: https://w3id.org/lmodel/uco-core
+from_schema: https://w3id.org/linkmodel/uco-analysis
 exact_mappings:
 - NCIT:C25648
 - wikidata:Q930933
+rank: 1000
 is_a: UcoObject
 slot_usage:
   endTime:
@@ -528,7 +504,8 @@ attributes:
   endTime:
     name: endTime
     description: The ending time of a time range.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     multivalued: true
     alias: endTime
     owner: Relationship
@@ -541,7 +518,8 @@ attributes:
     name: isDirectional
     description: A specification whether or not a relationship assertion is limited
       to the context FROM a source object(s) TO a target object.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: isDirectional
     owner: Relationship
     domain_of:
@@ -552,7 +530,8 @@ attributes:
   kindOfRelationship:
     name: kindOfRelationship
     description: A characterization of the nature of a relationship between objects.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: kindOfRelationship
     owner: Relationship
     domain_of:
@@ -562,7 +541,8 @@ attributes:
   source:
     name: source
     description: The originating node of a specified relationship.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     multivalued: true
     alias: source
     owner: Relationship
@@ -573,7 +553,8 @@ attributes:
   startTime:
     name: startTime
     description: The initial time of a time range.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     multivalued: true
     alias: startTime
     owner: Relationship
@@ -585,7 +566,8 @@ attributes:
   target:
     name: target
     description: The terminating node of a specified relationship.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: target
     owner: Relationship
     domain_of:
@@ -596,7 +578,8 @@ attributes:
   createdBy:
     name: createdBy
     description: The identity that created a characterization of a concept.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     domain: IdentityAbstraction
     alias: createdBy
     owner: Relationship
@@ -607,7 +590,8 @@ attributes:
   description:
     name: description
     description: A description of a particular concept characterization.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     multivalued: true
     alias: description
     owner: Relationship
@@ -617,7 +601,8 @@ attributes:
   externalReference:
     name: externalReference
     description: Specifies a reference to a resource outside of the UCO.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     domain: ExternalReference
     multivalued: true
     alias: externalReference
@@ -632,7 +617,8 @@ attributes:
     description: Further sets of properties characterizing a concept based on the
       particular context of the class and of the particular instance of the concept
       being characterized.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     domain: Facet
     multivalued: true
     alias: hasFacet
@@ -649,7 +635,8 @@ attributes:
       property. Object creators MUST update the modified property when creating a
       new version of an object. The modified timestamp MUST be precise to the nearest
       millisecond (exactly three digits after the decimal place in seconds).
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     multivalued: true
     alias: modifiedTime
     owner: Relationship
@@ -659,7 +646,8 @@ attributes:
   name:
     name: name
     description: The name of a particular concept characterization.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: name
     owner: Relationship
     domain_of:
@@ -670,7 +658,8 @@ attributes:
     name: objectMarking
     description: Marking definitions to be applied to a particular concept characterization
       in its entirety.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     multivalued: true
     alias: objectMarking
     owner: Relationship
@@ -682,7 +671,8 @@ attributes:
     description: The time at which a characterization of a concept is created. This
       time pertains to the time of creating the record object, and is not an intrinsic
       characteristic of the concept.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: objectCreatedTime
     owner: Relationship
     domain_of:
@@ -693,7 +683,8 @@ attributes:
     name: specVersion
     description: The version of UCO ontology or subontology specification used to
       characterize a concept.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: specVersion
     owner: Relationship
     domain_of:
@@ -703,7 +694,8 @@ attributes:
   tag:
     name: tag
     description: A generic tag/label.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     multivalued: true
     alias: tag
     owner: Relationship

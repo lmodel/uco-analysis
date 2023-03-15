@@ -198,34 +198,22 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-bundle">Class: Bundle</h1>
 <p><em>A bundle is a container for a grouping of UCO content with no presumption of shared context.</em></p>
-<p>URI: <a href="core:Bundle">core:Bundle</a></p>
+<p>URI: <a href="https://w3id.org/lmodel/uco-analysis/Bundle">analysis:Bundle</a></p>
 <div class="mermaid"> classDiagram
     class Bundle
       EnclosingCompilation &lt;|-- Bundle
 
       Bundle : createdBy
 
-          Bundle ..&gt; string : createdBy
-
       Bundle : description
-
-          Bundle ..&gt; string : description
 
       Bundle : externalReference
 
-          Bundle ..&gt; string : externalReference
-
       Bundle : hasFacet
-
-          Bundle ..&gt; string : hasFacet
 
       Bundle : modifiedTime
 
-          Bundle ..&gt; datetime : modifiedTime
-
       Bundle : name
-
-          Bundle ..&gt; string : name
 
       Bundle : object
 
@@ -233,19 +221,13 @@
 
       Bundle : objectCreatedTime
 
-          Bundle ..&gt; datetime : objectCreatedTime
-
       Bundle : objectMarking
 
           Bundle ..&gt; MarkingDefinitionAbstraction : objectMarking
 
       Bundle : specVersion
 
-          Bundle ..&gt; string : specVersion
-
       Bundle : tag
-
-          Bundle ..&gt; string : tag
 
 
 </div>
@@ -284,37 +266,37 @@
 </tr>
 <tr>
 <td><a href="../createdBy/">createdBy</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The identity that created a characterization of a concept</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../description/">description</a></td>
-<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..* <br/> <a href="../String/">String</a></td>
 <td>A description of a particular concept characterization</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../externalReference/">externalReference</a></td>
-<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..* <br/> <a href="../String/">String</a></td>
 <td>Specifies a reference to a resource outside of the UCO</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../hasFacet/">hasFacet</a></td>
-<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..* <br/> <a href="../String/">String</a></td>
 <td>Further sets of properties characterizing a concept based on the particular c...</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../modifiedTime/">modifiedTime</a></td>
-<td>0..* <br/> <a href="xsd:dateTime">xsd:dateTime</a></td>
+<td>0..* <br/> <a href="../Datetime/">Datetime</a></td>
 <td>Specifies the time that this particular version of the object was modified</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../name/">name</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The name of a particular concept characterization</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
@@ -326,19 +308,19 @@
 </tr>
 <tr>
 <td><a href="../objectCreatedTime/">objectCreatedTime</a></td>
-<td>0..1 <br/> <a href="xsd:dateTime">xsd:dateTime</a></td>
+<td>0..1 <br/> <a href="../Datetime/">Datetime</a></td>
 <td>The time at which a characterization of a concept is created</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../specVersion/">specVersion</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The version of UCO ontology or subontology specification used to characterize...</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../tag/">tag</a></td>
-<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..* <br/> <a href="../String/">String</a></td>
 <td>A generic tag/label</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
@@ -347,7 +329,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/lmodel/uco-core</li>
+<li>from schema: https://w3id.org/linkmodel/uco-analysis</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -360,11 +342,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>core:Bundle</td>
+<td>analysis:Bundle</td>
 </tr>
 <tr>
 <td>native</td>
-<td>core:Bundle</td>
+<td>analysis:Bundle</td>
 </tr>
 <tr>
 <td>narrow</td>
@@ -383,13 +365,14 @@
 <pre><code class="language-yaml">name: Bundle
 description: A bundle is a container for a grouping of UCO content with no presumption
   of shared context.
-from_schema: https://w3id.org/lmodel/uco-core
+from_schema: https://w3id.org/linkmodel/uco-analysis
 close_mappings:
 - wikidata:Q1643805
 - wikidata:Q17008256
 narrow_mappings:
 - wikidata:Q1995545
 - NCIT:C54192
+rank: 1000
 is_a: EnclosingCompilation
 
 </code></pre>
@@ -399,19 +382,21 @@ is_a: EnclosingCompilation
 <pre><code class="language-yaml">name: Bundle
 description: A bundle is a container for a grouping of UCO content with no presumption
   of shared context.
-from_schema: https://w3id.org/lmodel/uco-core
+from_schema: https://w3id.org/linkmodel/uco-analysis
 close_mappings:
 - wikidata:Q1643805
 - wikidata:Q17008256
 narrow_mappings:
 - wikidata:Q1995545
 - NCIT:C54192
+rank: 1000
 is_a: EnclosingCompilation
 attributes:
   object:
     name: object
     description: Specifies one or more UcoObjects.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     multivalued: true
     alias: object
     owner: Bundle
@@ -425,7 +410,8 @@ attributes:
   createdBy:
     name: createdBy
     description: The identity that created a characterization of a concept.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     domain: IdentityAbstraction
     alias: createdBy
     owner: Bundle
@@ -436,7 +422,8 @@ attributes:
   description:
     name: description
     description: A description of a particular concept characterization.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     multivalued: true
     alias: description
     owner: Bundle
@@ -446,7 +433,8 @@ attributes:
   externalReference:
     name: externalReference
     description: Specifies a reference to a resource outside of the UCO.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     domain: ExternalReference
     multivalued: true
     alias: externalReference
@@ -461,7 +449,8 @@ attributes:
     description: Further sets of properties characterizing a concept based on the
       particular context of the class and of the particular instance of the concept
       being characterized.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     domain: Facet
     multivalued: true
     alias: hasFacet
@@ -478,7 +467,8 @@ attributes:
       property. Object creators MUST update the modified property when creating a
       new version of an object. The modified timestamp MUST be precise to the nearest
       millisecond (exactly three digits after the decimal place in seconds).
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     multivalued: true
     alias: modifiedTime
     owner: Bundle
@@ -488,7 +478,8 @@ attributes:
   name:
     name: name
     description: The name of a particular concept characterization.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: name
     owner: Bundle
     domain_of:
@@ -499,7 +490,8 @@ attributes:
     name: objectMarking
     description: Marking definitions to be applied to a particular concept characterization
       in its entirety.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     multivalued: true
     alias: objectMarking
     owner: Bundle
@@ -511,7 +503,8 @@ attributes:
     description: The time at which a characterization of a concept is created. This
       time pertains to the time of creating the record object, and is not an intrinsic
       characteristic of the concept.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: objectCreatedTime
     owner: Bundle
     domain_of:
@@ -522,7 +515,8 @@ attributes:
     name: specVersion
     description: The version of UCO ontology or subontology specification used to
       characterize a concept.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: specVersion
     owner: Bundle
     domain_of:
@@ -532,7 +526,8 @@ attributes:
   tag:
     name: tag
     description: A generic tag/label.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     multivalued: true
     alias: tag
     owner: Bundle

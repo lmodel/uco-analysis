@@ -156,6 +156,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://lmodel.github.io/uco-analysis/Boolean/</loc>
+         <lastmod>2023-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://lmodel.github.io/uco-analysis/BooleanType/</loc>
          <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
@@ -266,6 +271,26 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://lmodel.github.io/uco-analysis/Date/</loc>
+         <lastmod>2023-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/uco-analysis/DateOrDatetime/</loc>
+         <lastmod>2023-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/uco-analysis/Datetime/</loc>
+         <lastmod>2023-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/uco-analysis/Decimal/</loc>
+         <lastmod>2023-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://lmodel.github.io/uco-analysis/DecimalType/</loc>
          <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
@@ -291,6 +316,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://lmodel.github.io/uco-analysis/Double/</loc>
+         <lastmod>2023-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://lmodel.github.io/uco-analysis/EnclosingCompilation/</loc>
          <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
@@ -312,6 +342,11 @@
     </url>
     <url>
          <loc>https://lmodel.github.io/uco-analysis/Facet/</loc>
+         <lastmod>2023-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/uco-analysis/Float/</loc>
          <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -347,6 +382,11 @@
     </url>
     <url>
          <loc>https://lmodel.github.io/uco-analysis/IdentityAbstraction/</loc>
+         <lastmod>2023-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/uco-analysis/Integer/</loc>
          <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -421,7 +461,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://lmodel.github.io/uco-analysis/Ncname/</loc>
+         <lastmod>2023-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/uco-analysis/Nodeidentifier/</loc>
+         <lastmod>2023-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://lmodel.github.io/uco-analysis/NonNegativeIntegerType/</loc>
+         <lastmod>2023-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/uco-analysis/Objectidentifier/</loc>
          <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -551,6 +606,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://lmodel.github.io/uco-analysis/String/</loc>
+         <lastmod>2023-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://lmodel.github.io/uco-analysis/StringType/</loc>
          <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
@@ -617,6 +677,11 @@
     </url>
     <url>
          <loc>https://lmodel.github.io/uco-analysis/ThreadRunningStatusVocab/</loc>
+         <lastmod>2023-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/uco-analysis/Time/</loc>
          <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -692,6 +757,16 @@
     </url>
     <url>
          <loc>https://lmodel.github.io/uco-analysis/UnixProcessStateVocab/</loc>
+         <lastmod>2023-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/uco-analysis/Uri/</loc>
+         <lastmod>2023-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/uco-analysis/Uriorcurie/</loc>
          <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -822,11 +897,6 @@
     </url>
     <url>
          <loc>https://lmodel.github.io/uco-analysis/classificationConfidence/</loc>
-         <lastmod>2023-03-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://lmodel.github.io/uco-analysis/collections/</loc>
          <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1256,42 +1326,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://lmodel.github.io/uco-analysis/types/</loc>
-         <lastmod>2023-03-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://lmodel.github.io/uco-analysis/uco-action/</loc>
-         <lastmod>2023-03-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://lmodel.github.io/uco-analysis/uco-analysis/</loc>
-         <lastmod>2023-03-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://lmodel.github.io/uco-analysis/uco-core/</loc>
-         <lastmod>2023-03-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://lmodel.github.io/uco-analysis/uco-types/</loc>
-         <lastmod>2023-03-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://lmodel.github.io/uco-analysis/ucolink-location/</loc>
-         <lastmod>2023-03-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://lmodel.github.io/uco-analysis/ucolink-pattern/</loc>
-         <lastmod>2023-03-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://lmodel.github.io/uco-analysis/ucolink-vocabulary/</loc>
          <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>

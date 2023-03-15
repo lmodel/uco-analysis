@@ -198,18 +198,14 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-hash">Class: Hash</h1>
 <p><em>"A hash is a grouping of characteristics unique to the result of applying a mathematical algorithm that maps data of arbitrary size to a bit string (the 'hash') and is a one-way function, that is, a function which is practically infeasible to invert. This is commonly used for integrity checking of data. [based on https://en.wikipedia.org/wiki/Cryptographic_hash_function]"</em></p>
-<p>URI: <a href="types:Hash">types:Hash</a></p>
+<p>URI: <a href="https://w3id.org/lmodel/uco-analysis/Hash">analysis:Hash</a></p>
 <div class="mermaid"> classDiagram
     class Hash
       UcoInherentCharacterizationThing &lt;|-- Hash
 
       Hash : hashMethod
 
-          Hash ..&gt; string : hashMethod
-
       Hash : hashValue
-
-          Hash ..&gt; hex binary type : hashValue
 
 
 </div>
@@ -242,7 +238,7 @@
 </tr>
 <tr>
 <td><a href="../hashMethod/">hashMethod</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>"A particular cryptographic hashing method (e</td>
 <td>direct</td>
 </tr>
@@ -251,7 +247,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/lmodel/uco-types</li>
+<li>from schema: https://w3id.org/linkmodel/uco-analysis</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -264,11 +260,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>types:Hash</td>
+<td>analysis:Hash</td>
 </tr>
 <tr>
 <td>native</td>
-<td>types:Hash</td>
+<td>analysis:Hash</td>
 </tr>
 <tr>
 <td>exact</td>
@@ -285,10 +281,11 @@ description: '"A hash is a grouping of characteristics unique to the result of a
   a mathematical algorithm that maps data of arbitrary size to a bit string (the ''hash'')
   and is a one-way function, that is, a function which is practically infeasible to
   invert. This is commonly used for integrity checking of data. [based on https://en.wikipedia.org/wiki/Cryptographic_hash_function]"'
-from_schema: https://w3id.org/lmodel/uco-types
+from_schema: https://w3id.org/linkmodel/uco-analysis
 exact_mappings:
 - NCIT:C68725
 - wikidata:Q477202
+rank: 1000
 is_a: UcoInherentCharacterizationThing
 slots:
 - hashValue
@@ -321,10 +318,11 @@ description: '"A hash is a grouping of characteristics unique to the result of a
   a mathematical algorithm that maps data of arbitrary size to a bit string (the ''hash'')
   and is a one-way function, that is, a function which is practically infeasible to
   invert. This is commonly used for integrity checking of data. [based on https://en.wikipedia.org/wiki/Cryptographic_hash_function]"'
-from_schema: https://w3id.org/lmodel/uco-types
+from_schema: https://w3id.org/linkmodel/uco-analysis
 exact_mappings:
 - NCIT:C68725
 - wikidata:Q477202
+rank: 1000
 is_a: UcoInherentCharacterizationThing
 slot_usage:
   hashValue:
@@ -348,7 +346,8 @@ attributes:
   hashValue:
     name: hashValue
     description: '"A cryptographic hash value."'
-    from_schema: https://w3id.org/lmodel/uco-types
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: hashValue
     owner: Hash
     domain_of:
@@ -360,7 +359,8 @@ attributes:
   hashMethod:
     name: hashMethod
     description: '"A particular cryptographic hashing method (e.g., MD5)."'
-    from_schema: https://w3id.org/lmodel/uco-types
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: hashMethod
     owner: Hash
     domain_of:

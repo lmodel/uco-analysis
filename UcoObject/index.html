@@ -203,7 +203,7 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-ucoobject">Class: UcoObject</h1>
 <p><em>A UCO object is a representation of a fundamental concept either directly inherent to the cyber domain or indirectly related to the cyber domain and necessary for contextually characterizing cyber domain concepts and relationships. Within the Unified Cyber Ontology (UCO) structure this is the base class acting as a consistent, unifying and interoperable foundation for all explicit and inter-relatable content objects.</em></p>
-<p>URI: <a href="core:UcoObject">core:UcoObject</a></p>
+<p>URI: <a href="https://w3id.org/lmodel/uco-analysis/UcoObject">analysis:UcoObject</a></p>
 <div class="mermaid"> classDiagram
     class UcoObject
       UcoThing &lt;|-- UcoObject
@@ -225,31 +225,17 @@
 
       UcoObject : createdBy
 
-          UcoObject ..&gt; string : createdBy
-
       UcoObject : description
-
-          UcoObject ..&gt; string : description
 
       UcoObject : externalReference
 
-          UcoObject ..&gt; string : externalReference
-
       UcoObject : hasFacet
-
-          UcoObject ..&gt; string : hasFacet
 
       UcoObject : modifiedTime
 
-          UcoObject ..&gt; datetime : modifiedTime
-
       UcoObject : name
 
-          UcoObject ..&gt; string : name
-
       UcoObject : objectCreatedTime
-
-          UcoObject ..&gt; datetime : objectCreatedTime
 
       UcoObject : objectMarking
 
@@ -257,11 +243,7 @@
 
       UcoObject : specVersion
 
-          UcoObject ..&gt; string : specVersion
-
       UcoObject : tag
-
-          UcoObject ..&gt; string : tag
 
 
 </div>
@@ -299,37 +281,37 @@
 <tbody>
 <tr>
 <td><a href="../createdBy/">createdBy</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The identity that created a characterization of a concept</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../description/">description</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>A description of a particular concept characterization</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../externalReference/">externalReference</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>Specifies a reference to a resource outside of the UCO</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../hasFacet/">hasFacet</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>Further sets of properties characterizing a concept based on the particular c...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../modifiedTime/">modifiedTime</a></td>
-<td>0..1 <br/> <a href="xsd:dateTime">xsd:dateTime</a></td>
+<td>0..1 <br/> <a href="../Datetime/">Datetime</a></td>
 <td>Specifies the time that this particular version of the object was modified</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../name/">name</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The name of a particular concept characterization</td>
 <td>direct</td>
 </tr>
@@ -341,19 +323,19 @@
 </tr>
 <tr>
 <td><a href="../objectCreatedTime/">objectCreatedTime</a></td>
-<td>0..1 <br/> <a href="xsd:dateTime">xsd:dateTime</a></td>
+<td>0..1 <br/> <a href="../Datetime/">Datetime</a></td>
 <td>The time at which a characterization of a concept is created</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../specVersion/">specVersion</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The version of UCO ontology or subontology specification used to characterize...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../tag/">tag</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>A generic tag/label</td>
 <td>direct</td>
 </tr>
@@ -597,7 +579,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/lmodel/uco-core</li>
+<li>from schema: https://w3id.org/linkmodel/uco-analysis</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -610,11 +592,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>core:UcoObject</td>
+<td>analysis:UcoObject</td>
 </tr>
 <tr>
 <td>native</td>
-<td>core:UcoObject</td>
+<td>analysis:UcoObject</td>
 </tr>
 <tr>
 <td>related</td>
@@ -633,10 +615,11 @@ description: A UCO object is a representation of a fundamental concept either di
   the Unified Cyber Ontology (UCO) structure this is the base class acting as a consistent,
   unifying and interoperable foundation for all explicit and inter-relatable content
   objects.
-from_schema: https://w3id.org/lmodel/uco-core
+from_schema: https://w3id.org/linkmodel/uco-analysis
 related_mappings:
 - wikidata:Q488383
 - SIO:000776
+rank: 1000
 is_a: UcoThing
 slots:
 - createdBy
@@ -716,10 +699,11 @@ description: A UCO object is a representation of a fundamental concept either di
   the Unified Cyber Ontology (UCO) structure this is the base class acting as a consistent,
   unifying and interoperable foundation for all explicit and inter-relatable content
   objects.
-from_schema: https://w3id.org/lmodel/uco-core
+from_schema: https://w3id.org/linkmodel/uco-analysis
 related_mappings:
 - wikidata:Q488383
 - SIO:000776
+rank: 1000
 is_a: UcoThing
 slot_usage:
   description:
@@ -778,7 +762,8 @@ attributes:
   createdBy:
     name: createdBy
     description: The identity that created a characterization of a concept.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     domain: IdentityAbstraction
     alias: createdBy
     owner: UcoObject
@@ -789,7 +774,8 @@ attributes:
   description:
     name: description
     description: A description of a particular concept characterization.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     multivalued: true
     alias: description
     owner: UcoObject
@@ -799,7 +785,8 @@ attributes:
   externalReference:
     name: externalReference
     description: Specifies a reference to a resource outside of the UCO.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     domain: ExternalReference
     multivalued: true
     alias: externalReference
@@ -814,7 +801,8 @@ attributes:
     description: Further sets of properties characterizing a concept based on the
       particular context of the class and of the particular instance of the concept
       being characterized.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     domain: Facet
     multivalued: true
     alias: hasFacet
@@ -831,7 +819,8 @@ attributes:
       property. Object creators MUST update the modified property when creating a
       new version of an object. The modified timestamp MUST be precise to the nearest
       millisecond (exactly three digits after the decimal place in seconds).
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     multivalued: true
     alias: modifiedTime
     owner: UcoObject
@@ -841,7 +830,8 @@ attributes:
   name:
     name: name
     description: The name of a particular concept characterization.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: name
     owner: UcoObject
     domain_of:
@@ -852,7 +842,8 @@ attributes:
     name: objectMarking
     description: Marking definitions to be applied to a particular concept characterization
       in its entirety.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     multivalued: true
     alias: objectMarking
     owner: UcoObject
@@ -864,7 +855,8 @@ attributes:
     description: The time at which a characterization of a concept is created. This
       time pertains to the time of creating the record object, and is not an intrinsic
       characteristic of the concept.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: objectCreatedTime
     owner: UcoObject
     domain_of:
@@ -875,7 +867,8 @@ attributes:
     name: specVersion
     description: The version of UCO ontology or subontology specification used to
       characterize a concept.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: specVersion
     owner: UcoObject
     domain_of:
@@ -885,7 +878,8 @@ attributes:
   tag:
     name: tag
     description: A generic tag/label.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     multivalued: true
     alias: tag
     owner: UcoObject

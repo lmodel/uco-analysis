@@ -208,7 +208,7 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-bag">Class: Bag</h1>
 <p><em>Collection that can have a number of copies of each object</em></p>
-<p>URI: <a href="collections:Bag">collections:Bag</a></p>
+<p>URI: <a href="https://w3id.org/lmodel/uco-analysis/Bag">analysis:Bag</a></p>
 <div class="mermaid"> classDiagram
     class Bag
       Collection &lt;|-- Bag
@@ -223,8 +223,6 @@
           Bag ..&gt; Thing : element
 
       Bag : size
-
-          Bag ..&gt; positive integer : size
 
 
 </div>
@@ -305,7 +303,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/lmodel/collections</li>
+<li>from schema: https://w3id.org/linkmodel/uco-analysis</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -318,11 +316,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>collections:Bag</td>
+<td>analysis:Bag</td>
 </tr>
 <tr>
 <td>native</td>
-<td>collections:Bag</td>
+<td>analysis:Bag</td>
 </tr>
 <tr>
 <td>exact</td>
@@ -336,13 +334,14 @@
 <details>
 <pre><code class="language-yaml">name: Bag
 description: Collection that can have a number of copies of each object
-from_schema: https://w3id.org/lmodel/collections
+from_schema: https://w3id.org/linkmodel/uco-analysis
 aliases:
 - bag
 exact_mappings:
 - co:Bag
 - NCIT:C95628
 - wikidata:Q864377
+rank: 1000
 is_a: Collection
 disjoint_with:
 - Set
@@ -353,13 +352,14 @@ disjoint_with:
 <details>
 <pre><code class="language-yaml">name: Bag
 description: Collection that can have a number of copies of each object
-from_schema: https://w3id.org/lmodel/collections
+from_schema: https://w3id.org/linkmodel/uco-analysis
 aliases:
 - bag
 exact_mappings:
 - co:Bag
 - NCIT:C95628
 - wikidata:Q864377
+rank: 1000
 is_a: Collection
 attributes:
   element:
@@ -369,7 +369,8 @@ attributes:
         tag: owl
         value: allValuesFrom
     description: The link to the members of a collection
-    from_schema: https://w3id.org/lmodel/collections
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     mixin: true
     domain: Collection
     multivalued: true
@@ -381,7 +382,8 @@ attributes:
   size:
     name: size
     description: The number of item belonging to a collection.
-    from_schema: https://w3id.org/lmodel/collections
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     domain: Collection
     alias: size
     owner: Bag

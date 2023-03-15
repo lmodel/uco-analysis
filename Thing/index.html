@@ -205,7 +205,7 @@
 <ul>
 <li><strong>NOTE</strong>: this is an abstract class and should not be instantiated directly</li>
 </ul>
-<p>URI: <a href="collections:Thing">collections:Thing</a></p>
+<p>URI: <a href="https://w3id.org/lmodel/uco-analysis/Thing">analysis:Thing</a></p>
 <div class="mermaid"> classDiagram
     class Thing
       Thing &lt;|-- Collection
@@ -286,7 +286,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/lmodel/collections</li>
+<li>from schema: https://w3id.org/linkmodel/uco-analysis</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -299,11 +299,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>collections:Thing</td>
+<td>analysis:Thing</td>
 </tr>
 <tr>
 <td>native</td>
-<td>collections:Thing</td>
+<td>analysis:Thing</td>
 </tr>
 <tr>
 <td>exact</td>
@@ -316,9 +316,10 @@
 <h3 id="direct">Direct</h3>
 <details>
 <pre><code class="language-yaml">name: Thing
-from_schema: https://w3id.org/lmodel/collections
+from_schema: https://w3id.org/linkmodel/uco-analysis
 exact_mappings:
 - owl:Thing
+rank: 1000
 abstract: true
 
 </code></pre>
@@ -326,9 +327,10 @@ abstract: true
 <h3 id="induced">Induced</h3>
 <details>
 <pre><code class="language-yaml">name: Thing
-from_schema: https://w3id.org/lmodel/collections
+from_schema: https://w3id.org/linkmodel/uco-analysis
 exact_mappings:
 - owl:Thing
+rank: 1000
 abstract: true
 
 </code></pre>

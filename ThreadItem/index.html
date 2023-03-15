@@ -203,7 +203,7 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-threaditem">Class: ThreadItem</h1>
 <p><em>"A ThreadItem is a member of a thread."</em></p>
-<p>URI: <a href="collections:CoItem">collections:CoItem</a></p>
+<p>URI: <a href="https://w3id.org/lmodel/collections/CoItem">collections:CoItem</a></p>
 <div class="mermaid"> classDiagram
     class ThreadItem
       UcoThing &lt;|-- ThreadItem
@@ -265,7 +265,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/lmodel/uco-types</li>
+<li>from schema: https://w3id.org/linkmodel/uco-analysis</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -282,7 +282,7 @@
 </tr>
 <tr>
 <td>native</td>
-<td>types:ThreadItem</td>
+<td>analysis:ThreadItem</td>
 </tr>
 </tbody>
 </table>
@@ -292,7 +292,8 @@
 <details>
 <pre><code class="language-yaml">name: ThreadItem
 description: '"A ThreadItem is a member of a thread."'
-from_schema: https://w3id.org/lmodel/uco-types
+from_schema: https://w3id.org/linkmodel/uco-analysis
+rank: 1000
 mixins:
 - UcoThing
 slots:
@@ -314,7 +315,8 @@ disjoint_with:
 <details>
 <pre><code class="language-yaml">name: ThreadItem
 description: '"A ThreadItem is a member of a thread."'
-from_schema: https://w3id.org/lmodel/uco-types
+from_schema: https://w3id.org/linkmodel/uco-analysis
+rank: 1000
 mixins:
 - UcoThing
 slot_usage:
@@ -328,7 +330,8 @@ attributes:
   itemContent:
     name: itemContent
     description: The link to the actual resource to which the item refers.
-    from_schema: https://w3id.org/lmodel/collections
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     mixin: true
     domain: UcoObject
     multivalued: true

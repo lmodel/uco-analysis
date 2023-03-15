@@ -198,14 +198,12 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-actionlifecycle">Class: ActionLifecycle</h1>
 <p><em>"An action lifecycle is an action pattern consisting of an ordered set of multiple actions or subordinate action lifecycles."</em></p>
-<p>URI: <a href="action:ActionLifecycle">action:ActionLifecycle</a></p>
+<p>URI: <a href="https://w3id.org/lmodel/uco-analysis/ActionLifecycle">analysis:ActionLifecycle</a></p>
 <div class="mermaid"> classDiagram
     class ActionLifecycle
       Action &lt;|-- ActionLifecycle
 
       ActionLifecycle : actionCount
-
-          ActionLifecycle ..&gt; non negative integer type : actionCount
 
       ActionLifecycle : actionStatus
 
@@ -213,15 +211,9 @@
 
       ActionLifecycle : createdBy
 
-          ActionLifecycle ..&gt; string : createdBy
-
       ActionLifecycle : description
 
-          ActionLifecycle ..&gt; string : description
-
       ActionLifecycle : endTime
-
-          ActionLifecycle ..&gt; datetime : endTime
 
       ActionLifecycle : environment
 
@@ -233,11 +225,7 @@
 
       ActionLifecycle : externalReference
 
-          ActionLifecycle ..&gt; string : externalReference
-
       ActionLifecycle : hasFacet
-
-          ActionLifecycle ..&gt; string : hasFacet
 
       ActionLifecycle : instrument
 
@@ -249,19 +237,13 @@
 
       ActionLifecycle : modifiedTime
 
-          ActionLifecycle ..&gt; datetime : modifiedTime
-
       ActionLifecycle : name
-
-          ActionLifecycle ..&gt; string : name
 
       ActionLifecycle : object
 
           ActionLifecycle ..&gt; UcoObject : object
 
       ActionLifecycle : objectCreatedTime
-
-          ActionLifecycle ..&gt; datetime : objectCreatedTime
 
       ActionLifecycle : objectMarking
 
@@ -285,19 +267,13 @@
 
       ActionLifecycle : specVersion
 
-          ActionLifecycle ..&gt; string : specVersion
-
       ActionLifecycle : startTime
-
-          ActionLifecycle ..&gt; datetime : startTime
 
       ActionLifecycle : subaction
 
           ActionLifecycle ..&gt; Action : subaction
 
       ActionLifecycle : tag
-
-          ActionLifecycle ..&gt; string : tag
 
 
 </div>
@@ -339,13 +315,13 @@
 </tr>
 <tr>
 <td><a href="../endTime/">endTime</a></td>
-<td>0..1 <br/> <a href="xsd:dateTime">xsd:dateTime</a></td>
+<td>0..1 <br/> <a href="../Datetime/">Datetime</a></td>
 <td>The ending time of a time range</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../startTime/">startTime</a></td>
-<td>0..1 <br/> <a href="xsd:dateTime">xsd:dateTime</a></td>
+<td>0..1 <br/> <a href="../Datetime/">Datetime</a></td>
 <td>The initial time of a time range</td>
 <td>direct</td>
 </tr>
@@ -411,37 +387,37 @@
 </tr>
 <tr>
 <td><a href="../createdBy/">createdBy</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The identity that created a characterization of a concept</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../description/">description</a></td>
-<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..* <br/> <a href="../String/">String</a></td>
 <td>A description of a particular concept characterization</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../externalReference/">externalReference</a></td>
-<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..* <br/> <a href="../String/">String</a></td>
 <td>Specifies a reference to a resource outside of the UCO</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../hasFacet/">hasFacet</a></td>
-<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..* <br/> <a href="../String/">String</a></td>
 <td>Further sets of properties characterizing a concept based on the particular c...</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../modifiedTime/">modifiedTime</a></td>
-<td>0..* <br/> <a href="xsd:dateTime">xsd:dateTime</a></td>
+<td>0..* <br/> <a href="../Datetime/">Datetime</a></td>
 <td>Specifies the time that this particular version of the object was modified</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../name/">name</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The name of a particular concept characterization</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
@@ -453,19 +429,19 @@
 </tr>
 <tr>
 <td><a href="../objectCreatedTime/">objectCreatedTime</a></td>
-<td>0..1 <br/> <a href="xsd:dateTime">xsd:dateTime</a></td>
+<td>0..1 <br/> <a href="../Datetime/">Datetime</a></td>
 <td>The time at which a characterization of a concept is created</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../specVersion/">specVersion</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The version of UCO ontology or subontology specification used to characterize...</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../tag/">tag</a></td>
-<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..* <br/> <a href="../String/">String</a></td>
 <td>A generic tag/label</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
@@ -474,7 +450,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/linkmodel/uco-action</li>
+<li>from schema: https://w3id.org/linkmodel/uco-analysis</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -487,11 +463,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>action:ActionLifecycle</td>
+<td>analysis:ActionLifecycle</td>
 </tr>
 <tr>
 <td>native</td>
-<td>action:ActionLifecycle</td>
+<td>analysis:ActionLifecycle</td>
 </tr>
 </tbody>
 </table>
@@ -502,7 +478,8 @@
 <pre><code class="language-yaml">name: ActionLifecycle
 description: '"An action lifecycle is an action pattern consisting of an ordered set
   of multiple actions or subordinate action lifecycles."'
-from_schema: https://w3id.org/linkmodel/uco-action
+from_schema: https://w3id.org/linkmodel/uco-analysis
+rank: 1000
 is_a: Action
 slots:
 - phase
@@ -559,7 +536,8 @@ slot_usage:
 <pre><code class="language-yaml">name: ActionLifecycle
 description: '"An action lifecycle is an action pattern consisting of an ordered set
   of multiple actions or subordinate action lifecycles."'
-from_schema: https://w3id.org/linkmodel/uco-action
+from_schema: https://w3id.org/linkmodel/uco-analysis
+rank: 1000
 is_a: Action
 slot_usage:
   phase:
@@ -607,7 +585,8 @@ attributes:
     name: phase
     description: '"The ordered set of actions or sub action-lifecycles that represent
       the action lifecycle."'
-    from_schema: https://w3id.org/linkmodel/uco-action
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     is_a: subaction
     alias: phase
     owner: ActionLifecycle
@@ -621,7 +600,8 @@ attributes:
     name: error
     description: '"A characterization of the differences between the expected and
       the actual performance of the action."'
-    from_schema: https://w3id.org/linkmodel/uco-action
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     multivalued: true
     alias: error
     owner: ActionLifecycle
@@ -633,7 +613,8 @@ attributes:
   endTime:
     name: endTime
     description: '"The time at which performance of the action ended."'
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: endTime
     owner: ActionLifecycle
     domain_of:
@@ -645,7 +626,8 @@ attributes:
   startTime:
     name: startTime
     description: '"The time at which performance of the action began."'
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: startTime
     owner: ActionLifecycle
     domain_of:
@@ -657,7 +639,8 @@ attributes:
   actionCount:
     name: actionCount
     description: '"The number of times that the action was performed."'
-    from_schema: https://w3id.org/linkmodel/uco-action
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: actionCount
     owner: ActionLifecycle
     domain_of:
@@ -669,7 +652,8 @@ attributes:
     name: subaction
     description: '"References to other actions that make up part of a larger more
       complex action."'
-    from_schema: https://w3id.org/linkmodel/uco-action
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     multivalued: true
     alias: subaction
     owner: ActionLifecycle
@@ -679,7 +663,8 @@ attributes:
   environment:
     name: environment
     description: '"The environment wherein an action occurs."'
-    from_schema: https://w3id.org/linkmodel/uco-action
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: environment
     owner: ActionLifecycle
     domain_of:
@@ -688,7 +673,8 @@ attributes:
   performer:
     name: performer
     description: '"The primary performer of an action."'
-    from_schema: https://w3id.org/linkmodel/uco-action
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: performer
     owner: ActionLifecycle
     domain_of:
@@ -697,7 +683,8 @@ attributes:
   instrument:
     name: instrument
     description: '"The things used to perform an action."'
-    from_schema: https://w3id.org/linkmodel/uco-action
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     multivalued: true
     alias: instrument
     owner: ActionLifecycle
@@ -707,7 +694,8 @@ attributes:
   object:
     name: object
     description: '"The things that the action is performed on/against."'
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     multivalued: true
     alias: object
     owner: ActionLifecycle
@@ -720,7 +708,8 @@ attributes:
   participant:
     name: participant
     description: '"The supporting (non-primary) performers of an action."'
-    from_schema: https://w3id.org/linkmodel/uco-action
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     multivalued: true
     alias: participant
     owner: ActionLifecycle
@@ -730,7 +719,8 @@ attributes:
   result:
     name: result
     description: '"The things resulting from performing an action."'
-    from_schema: https://w3id.org/linkmodel/uco-action
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     multivalued: true
     alias: result
     owner: ActionLifecycle
@@ -740,7 +730,8 @@ attributes:
   location:
     name: location
     description: '"The locations where an action occurs."'
-    from_schema: https://w3id.org/linkmodel/uco-action
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     multivalued: true
     alias: location
     owner: ActionLifecycle
@@ -750,7 +741,8 @@ attributes:
   actionStatus:
     name: actionStatus
     description: '"The current state of the action."'
-    from_schema: https://w3id.org/linkmodel/uco-action
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     is_a: ActionStatusTypeVocab
     alias: actionStatus
     owner: ActionLifecycle
@@ -761,7 +753,8 @@ attributes:
   createdBy:
     name: createdBy
     description: The identity that created a characterization of a concept.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     domain: IdentityAbstraction
     alias: createdBy
     owner: ActionLifecycle
@@ -772,7 +765,8 @@ attributes:
   description:
     name: description
     description: A description of a particular concept characterization.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     multivalued: true
     alias: description
     owner: ActionLifecycle
@@ -782,7 +776,8 @@ attributes:
   externalReference:
     name: externalReference
     description: Specifies a reference to a resource outside of the UCO.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     domain: ExternalReference
     multivalued: true
     alias: externalReference
@@ -797,7 +792,8 @@ attributes:
     description: Further sets of properties characterizing a concept based on the
       particular context of the class and of the particular instance of the concept
       being characterized.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     domain: Facet
     multivalued: true
     alias: hasFacet
@@ -814,7 +810,8 @@ attributes:
       property. Object creators MUST update the modified property when creating a
       new version of an object. The modified timestamp MUST be precise to the nearest
       millisecond (exactly three digits after the decimal place in seconds).
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     multivalued: true
     alias: modifiedTime
     owner: ActionLifecycle
@@ -824,7 +821,8 @@ attributes:
   name:
     name: name
     description: The name of a particular concept characterization.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: name
     owner: ActionLifecycle
     domain_of:
@@ -835,7 +833,8 @@ attributes:
     name: objectMarking
     description: Marking definitions to be applied to a particular concept characterization
       in its entirety.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     multivalued: true
     alias: objectMarking
     owner: ActionLifecycle
@@ -847,7 +846,8 @@ attributes:
     description: The time at which a characterization of a concept is created. This
       time pertains to the time of creating the record object, and is not an intrinsic
       characteristic of the concept.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: objectCreatedTime
     owner: ActionLifecycle
     domain_of:
@@ -858,7 +858,8 @@ attributes:
     name: specVersion
     description: The version of UCO ontology or subontology specification used to
       characterize a concept.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: specVersion
     owner: ActionLifecycle
     domain_of:
@@ -868,7 +869,8 @@ attributes:
   tag:
     name: tag
     description: A generic tag/label.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     multivalued: true
     alias: tag
     owner: ActionLifecycle

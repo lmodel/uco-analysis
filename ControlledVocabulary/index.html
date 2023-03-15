@@ -198,46 +198,28 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-controlledvocabulary">Class: ControlledVocabulary</h1>
 <p><em>A controlled vocabulary is an explicitly constrained set of string values.</em></p>
-<p>URI: <a href="core:ControlledVocabulary">core:ControlledVocabulary</a></p>
+<p>URI: <a href="https://w3id.org/lmodel/uco-analysis/ControlledVocabulary">analysis:ControlledVocabulary</a></p>
 <div class="mermaid"> classDiagram
     class ControlledVocabulary
       UcoObject &lt;|-- ControlledVocabulary
 
       ControlledVocabulary : constrainingVocabularyName
 
-          ControlledVocabulary ..&gt; string : constrainingVocabularyName
-
       ControlledVocabulary : constrainingVocabularyReference
-
-          ControlledVocabulary ..&gt; iri type : constrainingVocabularyReference
 
       ControlledVocabulary : createdBy
 
-          ControlledVocabulary ..&gt; string : createdBy
-
       ControlledVocabulary : description
-
-          ControlledVocabulary ..&gt; string : description
 
       ControlledVocabulary : externalReference
 
-          ControlledVocabulary ..&gt; string : externalReference
-
       ControlledVocabulary : hasFacet
-
-          ControlledVocabulary ..&gt; string : hasFacet
 
       ControlledVocabulary : modifiedTime
 
-          ControlledVocabulary ..&gt; datetime : modifiedTime
-
       ControlledVocabulary : name
 
-          ControlledVocabulary ..&gt; string : name
-
       ControlledVocabulary : objectCreatedTime
-
-          ControlledVocabulary ..&gt; datetime : objectCreatedTime
 
       ControlledVocabulary : objectMarking
 
@@ -245,15 +227,9 @@
 
       ControlledVocabulary : specVersion
 
-          ControlledVocabulary ..&gt; string : specVersion
-
       ControlledVocabulary : tag
 
-          ControlledVocabulary ..&gt; string : tag
-
       ControlledVocabulary : value
-
-          ControlledVocabulary ..&gt; string : value
 
 
 </div>
@@ -286,49 +262,49 @@
 </tr>
 <tr>
 <td><a href="../constrainingVocabularyName/">constrainingVocabularyName</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The name of an explicitly constrained set of string values</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../value/">value</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>A string value</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../createdBy/">createdBy</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The identity that created a characterization of a concept</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../description/">description</a></td>
-<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..* <br/> <a href="../String/">String</a></td>
 <td>A description of a particular concept characterization</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../externalReference/">externalReference</a></td>
-<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..* <br/> <a href="../String/">String</a></td>
 <td>Specifies a reference to a resource outside of the UCO</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../hasFacet/">hasFacet</a></td>
-<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..* <br/> <a href="../String/">String</a></td>
 <td>Further sets of properties characterizing a concept based on the particular c...</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../modifiedTime/">modifiedTime</a></td>
-<td>0..* <br/> <a href="xsd:dateTime">xsd:dateTime</a></td>
+<td>0..* <br/> <a href="../Datetime/">Datetime</a></td>
 <td>Specifies the time that this particular version of the object was modified</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../name/">name</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The name of a particular concept characterization</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
@@ -340,19 +316,19 @@
 </tr>
 <tr>
 <td><a href="../objectCreatedTime/">objectCreatedTime</a></td>
-<td>0..1 <br/> <a href="xsd:dateTime">xsd:dateTime</a></td>
+<td>0..1 <br/> <a href="../Datetime/">Datetime</a></td>
 <td>The time at which a characterization of a concept is created</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../specVersion/">specVersion</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The version of UCO ontology or subontology specification used to characterize...</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../tag/">tag</a></td>
-<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..* <br/> <a href="../String/">String</a></td>
 <td>A generic tag/label</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
@@ -361,7 +337,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/lmodel/uco-core</li>
+<li>from schema: https://w3id.org/linkmodel/uco-analysis</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -374,11 +350,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>core:ControlledVocabulary</td>
+<td>analysis:ControlledVocabulary</td>
 </tr>
 <tr>
 <td>native</td>
-<td>core:ControlledVocabulary</td>
+<td>analysis:ControlledVocabulary</td>
 </tr>
 <tr>
 <td>exact</td>
@@ -392,10 +368,11 @@
 <details>
 <pre><code class="language-yaml">name: ControlledVocabulary
 description: A controlled vocabulary is an explicitly constrained set of string values.
-from_schema: https://w3id.org/lmodel/uco-core
+from_schema: https://w3id.org/linkmodel/uco-analysis
 exact_mappings:
 - NCIT:C48697
 - wikidata:Q1469824
+rank: 1000
 is_a: UcoObject
 slots:
 - constrainingVocabularyReference
@@ -427,10 +404,11 @@ slot_usage:
 <details>
 <pre><code class="language-yaml">name: ControlledVocabulary
 description: A controlled vocabulary is an explicitly constrained set of string values.
-from_schema: https://w3id.org/lmodel/uco-core
+from_schema: https://w3id.org/linkmodel/uco-analysis
 exact_mappings:
 - NCIT:C48697
 - wikidata:Q1469824
+rank: 1000
 is_a: UcoObject
 slot_usage:
   constrainingVocabularyReference:
@@ -457,7 +435,8 @@ attributes:
     description: A reference to a specification for an explicitly constrained set
       of string values. The specification may be unstructured (e.g., web page listing
       string values) or structured (e.g. RDF/OWL enumeration).
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: constrainingVocabularyReference
     owner: ControlledVocabulary
     domain_of:
@@ -467,7 +446,8 @@ attributes:
   constrainingVocabularyName:
     name: constrainingVocabularyName
     description: The name of an explicitly constrained set of string values.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: constrainingVocabularyName
     owner: ControlledVocabulary
     domain_of:
@@ -477,7 +457,8 @@ attributes:
   value:
     name: value
     description: A string value.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: value
     owner: ControlledVocabulary
     domain_of:
@@ -490,7 +471,8 @@ attributes:
   createdBy:
     name: createdBy
     description: The identity that created a characterization of a concept.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     domain: IdentityAbstraction
     alias: createdBy
     owner: ControlledVocabulary
@@ -501,7 +483,8 @@ attributes:
   description:
     name: description
     description: A description of a particular concept characterization.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     multivalued: true
     alias: description
     owner: ControlledVocabulary
@@ -511,7 +494,8 @@ attributes:
   externalReference:
     name: externalReference
     description: Specifies a reference to a resource outside of the UCO.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     domain: ExternalReference
     multivalued: true
     alias: externalReference
@@ -526,7 +510,8 @@ attributes:
     description: Further sets of properties characterizing a concept based on the
       particular context of the class and of the particular instance of the concept
       being characterized.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     domain: Facet
     multivalued: true
     alias: hasFacet
@@ -543,7 +528,8 @@ attributes:
       property. Object creators MUST update the modified property when creating a
       new version of an object. The modified timestamp MUST be precise to the nearest
       millisecond (exactly three digits after the decimal place in seconds).
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     multivalued: true
     alias: modifiedTime
     owner: ControlledVocabulary
@@ -553,7 +539,8 @@ attributes:
   name:
     name: name
     description: The name of a particular concept characterization.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: name
     owner: ControlledVocabulary
     domain_of:
@@ -564,7 +551,8 @@ attributes:
     name: objectMarking
     description: Marking definitions to be applied to a particular concept characterization
       in its entirety.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     multivalued: true
     alias: objectMarking
     owner: ControlledVocabulary
@@ -576,7 +564,8 @@ attributes:
     description: The time at which a characterization of a concept is created. This
       time pertains to the time of creating the record object, and is not an intrinsic
       characteristic of the concept.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: objectCreatedTime
     owner: ControlledVocabulary
     domain_of:
@@ -587,7 +576,8 @@ attributes:
     name: specVersion
     description: The version of UCO ontology or subontology specification used to
       characterize a concept.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: specVersion
     owner: ControlledVocabulary
     domain_of:
@@ -597,7 +587,8 @@ attributes:
   tag:
     name: tag
     description: A generic tag/label.
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     multivalued: true
     alias: tag
     owner: ControlledVocabulary

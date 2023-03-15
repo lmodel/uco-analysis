@@ -198,34 +198,22 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-simpleaddressfacet">Class: SimpleAddressFacet</h1>
 <p><em>A simple address facet is a grouping of characteristics unique to a geolocation expressed as an administrative address.</em></p>
-<p>URI: <a href="location:SimpleAddressFacet">location:SimpleAddressFacet</a></p>
+<p>URI: <a href="https://w3id.org/lmodel/uco-analysis/SimpleAddressFacet">analysis:SimpleAddressFacet</a></p>
 <div class="mermaid"> classDiagram
     class SimpleAddressFacet
       Facet &lt;|-- SimpleAddressFacet
 
       SimpleAddressFacet : addressType
 
-          SimpleAddressFacet ..&gt; string : addressType
-
       SimpleAddressFacet : country
-
-          SimpleAddressFacet ..&gt; string : country
 
       SimpleAddressFacet : locality
 
-          SimpleAddressFacet ..&gt; string : locality
-
       SimpleAddressFacet : postalCode
-
-          SimpleAddressFacet ..&gt; string : postalCode
 
       SimpleAddressFacet : region
 
-          SimpleAddressFacet ..&gt; string : region
-
       SimpleAddressFacet : street
-
-          SimpleAddressFacet ..&gt; string : street
 
 
 </div>
@@ -255,37 +243,37 @@
 <tbody>
 <tr>
 <td><a href="../addressType/">addressType</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The type of the address, for instance home or work</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../country/">country</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The name of the geolocation country</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../locality/">locality</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The name of the geolocation locality (e</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../postalCode/">postalCode</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The zip-code</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../region/">region</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The name of the geolocation region (e</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../street/">street</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The name of the street</td>
 <td>direct</td>
 </tr>
@@ -294,7 +282,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/lmodel/ucolink-location</li>
+<li>from schema: https://w3id.org/linkmodel/uco-analysis</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -307,11 +295,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>location:SimpleAddressFacet</td>
+<td>analysis:SimpleAddressFacet</td>
 </tr>
 <tr>
 <td>native</td>
-<td>location:SimpleAddressFacet</td>
+<td>analysis:SimpleAddressFacet</td>
 </tr>
 </tbody>
 </table>
@@ -322,7 +310,8 @@
 <pre><code class="language-yaml">name: SimpleAddressFacet
 description: A simple address facet is a grouping of characteristics unique to a geolocation
   expressed as an administrative address.
-from_schema: https://w3id.org/lmodel/ucolink-location
+from_schema: https://w3id.org/linkmodel/uco-analysis
+rank: 1000
 is_a: Facet
 slots:
 - addressType
@@ -370,7 +359,8 @@ slot_usage:
 <pre><code class="language-yaml">name: SimpleAddressFacet
 description: A simple address facet is a grouping of characteristics unique to a geolocation
   expressed as an administrative address.
-from_schema: https://w3id.org/lmodel/ucolink-location
+from_schema: https://w3id.org/linkmodel/uco-analysis
+rank: 1000
 is_a: Facet
 slot_usage:
   addressType:
@@ -407,7 +397,8 @@ attributes:
   addressType:
     name: addressType
     description: The type of the address, for instance home or work.
-    from_schema: https://w3id.org/lmodel/ucolink-location
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: addressType
     owner: SimpleAddressFacet
     domain_of:
@@ -417,7 +408,8 @@ attributes:
   country:
     name: country
     description: The name of the geolocation country.
-    from_schema: https://w3id.org/lmodel/ucolink-location
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: country
     owner: SimpleAddressFacet
     domain_of:
@@ -427,7 +419,8 @@ attributes:
   locality:
     name: locality
     description: The name of the geolocation locality (e.g., city).
-    from_schema: https://w3id.org/lmodel/ucolink-location
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: locality
     owner: SimpleAddressFacet
     domain_of:
@@ -437,7 +430,8 @@ attributes:
   postalCode:
     name: postalCode
     description: The zip-code.
-    from_schema: https://w3id.org/lmodel/ucolink-location
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: postalCode
     owner: SimpleAddressFacet
     domain_of:
@@ -447,7 +441,8 @@ attributes:
   region:
     name: region
     description: The name of the geolocation region (e.g., state).
-    from_schema: https://w3id.org/lmodel/ucolink-location
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: region
     owner: SimpleAddressFacet
     domain_of:
@@ -457,7 +452,8 @@ attributes:
   street:
     name: street
     description: The name of the street.
-    from_schema: https://w3id.org/lmodel/ucolink-location
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: street
     owner: SimpleAddressFacet
     domain_of:

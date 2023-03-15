@@ -203,7 +203,7 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-set">Class: Set</h1>
 <p><em>A collection that cannot contain duplicate elements.</em></p>
-<p>URI: <a href="collections:Set">collections:Set</a></p>
+<p>URI: <a href="https://w3id.org/lmodel/uco-analysis/Set">analysis:Set</a></p>
 <div class="mermaid"> classDiagram
     class Set
       Collection &lt;|-- Set
@@ -213,8 +213,6 @@
           Set ..&gt; Thing : element
 
       Set : size
-
-          Set ..&gt; positive integer : size
 
 
 </div>
@@ -260,7 +258,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/lmodel/collections</li>
+<li>from schema: https://w3id.org/linkmodel/uco-analysis</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -273,11 +271,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>collections:Set</td>
+<td>analysis:Set</td>
 </tr>
 <tr>
 <td>native</td>
-<td>collections:Set</td>
+<td>analysis:Set</td>
 </tr>
 <tr>
 <td>exact</td>
@@ -295,7 +293,7 @@
 <details>
 <pre><code class="language-yaml">name: Set
 description: A collection that cannot contain duplicate elements.
-from_schema: https://w3id.org/lmodel/collections
+from_schema: https://w3id.org/linkmodel/uco-analysis
 aliases:
 - set
 exact_mappings:
@@ -304,6 +302,7 @@ exact_mappings:
 - wikidata:Q28813620
 narrow_mappings:
 - wikidata:Q36161
+rank: 1000
 is_a: Collection
 
 </code></pre>
@@ -312,7 +311,7 @@ is_a: Collection
 <details>
 <pre><code class="language-yaml">name: Set
 description: A collection that cannot contain duplicate elements.
-from_schema: https://w3id.org/lmodel/collections
+from_schema: https://w3id.org/linkmodel/uco-analysis
 aliases:
 - set
 exact_mappings:
@@ -321,6 +320,7 @@ exact_mappings:
 - wikidata:Q28813620
 narrow_mappings:
 - wikidata:Q36161
+rank: 1000
 is_a: Collection
 attributes:
   element:
@@ -330,7 +330,8 @@ attributes:
         tag: owl
         value: allValuesFrom
     description: The link to the members of a collection
-    from_schema: https://w3id.org/lmodel/collections
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     mixin: true
     domain: Collection
     multivalued: true
@@ -342,7 +343,8 @@ attributes:
   size:
     name: size
     description: The number of item belonging to a collection.
-    from_schema: https://w3id.org/lmodel/collections
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     domain: Collection
     alias: size
     owner: Set

@@ -198,18 +198,14 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-actionargumentfacet">Class: ActionArgumentFacet</h1>
 <p><em>"An action argument facet is a grouping of characteristics unique to a single parameter of an action."</em></p>
-<p>URI: <a href="action:ActionArgumentFacet">action:ActionArgumentFacet</a></p>
+<p>URI: <a href="https://w3id.org/lmodel/uco-analysis/ActionArgumentFacet">analysis:ActionArgumentFacet</a></p>
 <div class="mermaid"> classDiagram
     class ActionArgumentFacet
       Facet &lt;|-- ActionArgumentFacet
 
       ActionArgumentFacet : argumentName
 
-          ActionArgumentFacet ..&gt; string : argumentName
-
       ActionArgumentFacet : value
-
-          ActionArgumentFacet ..&gt; string : value
 
 
 </div>
@@ -239,13 +235,13 @@
 <tbody>
 <tr>
 <td><a href="../argumentName/">argumentName</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>"The identifying label of an argument</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../value/">value</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>A string value</td>
 <td>direct</td>
 </tr>
@@ -254,7 +250,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/linkmodel/uco-action</li>
+<li>from schema: https://w3id.org/linkmodel/uco-analysis</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -267,11 +263,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>action:ActionArgumentFacet</td>
+<td>analysis:ActionArgumentFacet</td>
 </tr>
 <tr>
 <td>native</td>
-<td>action:ActionArgumentFacet</td>
+<td>analysis:ActionArgumentFacet</td>
 </tr>
 </tbody>
 </table>
@@ -282,7 +278,8 @@
 <pre><code class="language-yaml">name: ActionArgumentFacet
 description: '"An action argument facet is a grouping of characteristics unique to
   a single parameter of an action."'
-from_schema: https://w3id.org/linkmodel/uco-action
+from_schema: https://w3id.org/linkmodel/uco-analysis
+rank: 1000
 is_a: Facet
 slots:
 - argumentName
@@ -313,7 +310,8 @@ slot_usage:
 <pre><code class="language-yaml">name: ActionArgumentFacet
 description: '"An action argument facet is a grouping of characteristics unique to
   a single parameter of an action."'
-from_schema: https://w3id.org/linkmodel/uco-action
+from_schema: https://w3id.org/linkmodel/uco-analysis
+rank: 1000
 is_a: Facet
 slot_usage:
   argumentName:
@@ -337,7 +335,8 @@ attributes:
   argumentName:
     name: argumentName
     description: '"The identifying label of an argument."'
-    from_schema: https://w3id.org/linkmodel/uco-action
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: argumentName
     owner: ActionArgumentFacet
     domain_of:
@@ -349,7 +348,8 @@ attributes:
   value:
     name: value
     description: '"The value of an action parameter."'
-    from_schema: https://w3id.org/lmodel/uco-core
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     alias: value
     owner: ActionArgumentFacet
     domain_of:

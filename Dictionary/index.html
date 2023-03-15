@@ -198,7 +198,7 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-dictionary">Class: Dictionary</h1>
 <p><em>"A dictionary is list of (term/key, value) pairs with each term/key existing no more than once."</em></p>
-<p>URI: <a href="types:Dictionary">types:Dictionary</a></p>
+<p>URI: <a href="https://w3id.org/lmodel/uco-analysis/Dictionary">analysis:Dictionary</a></p>
 <div class="mermaid"> classDiagram
     class Dictionary
       UcoInherentCharacterizationThing &lt;|-- Dictionary
@@ -248,7 +248,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/lmodel/uco-types</li>
+<li>from schema: https://w3id.org/linkmodel/uco-analysis</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -261,11 +261,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>types:Dictionary</td>
+<td>analysis:Dictionary</td>
 </tr>
 <tr>
 <td>native</td>
-<td>types:Dictionary</td>
+<td>analysis:Dictionary</td>
 </tr>
 <tr>
 <td>exact</td>
@@ -284,7 +284,7 @@
 <pre><code class="language-yaml">name: Dictionary
 description: '"A dictionary is list of (term/key, value) pairs with each term/key
   existing no more than once."'
-from_schema: https://w3id.org/lmodel/uco-types
+from_schema: https://w3id.org/linkmodel/uco-analysis
 exact_mappings:
 - wikidata:Q80585
 - wikidata:Q20706915
@@ -293,6 +293,7 @@ broad_mappings:
 - GSSO:D016437
 - NCIT:C49461
 - sumo:Dictionary
+rank: 1000
 is_a: UcoInherentCharacterizationThing
 slots:
 - entry
@@ -313,7 +314,7 @@ slot_usage:
 <pre><code class="language-yaml">name: Dictionary
 description: '"A dictionary is list of (term/key, value) pairs with each term/key
   existing no more than once."'
-from_schema: https://w3id.org/lmodel/uco-types
+from_schema: https://w3id.org/linkmodel/uco-analysis
 exact_mappings:
 - wikidata:Q80585
 - wikidata:Q20706915
@@ -322,6 +323,7 @@ broad_mappings:
 - GSSO:D016437
 - NCIT:C49461
 - sumo:Dictionary
+rank: 1000
 is_a: UcoInherentCharacterizationThing
 slot_usage:
   entry:
@@ -336,7 +338,8 @@ attributes:
   entry:
     name: entry
     description: '"A dictionary entry."'
-    from_schema: https://w3id.org/lmodel/uco-types
+    from_schema: https://w3id.org/linkmodel/uco-analysis
+    rank: 1000
     multivalued: true
     alias: entry
     owner: Dictionary
