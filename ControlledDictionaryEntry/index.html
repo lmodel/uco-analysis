@@ -198,14 +198,18 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-controlleddictionaryentry">Class: ControlledDictionaryEntry</h1>
 <p><em>"A controlled dictionary entry is a single (term/key, value) pair where the term/key is constrained to an explicitly defined set of values."</em></p>
-<p>URI: <a href="https://w3id.org/lmodel/uco-analysis/ControlledDictionaryEntry">analysis:ControlledDictionaryEntry</a></p>
+<p>URI: <a href="types:ControlledDictionaryEntry">types:ControlledDictionaryEntry</a></p>
 <div class="mermaid"> classDiagram
     class ControlledDictionaryEntry
       DictionaryEntry &lt;|-- ControlledDictionaryEntry
 
       ControlledDictionaryEntry : key
 
+          ControlledDictionaryEntry ..&gt; string : key
+
       ControlledDictionaryEntry : value
+
+          ControlledDictionaryEntry ..&gt; string : value
 
 
 </div>
@@ -235,13 +239,13 @@
 <tbody>
 <tr>
 <td><a href="../key/">key</a></td>
-<td>1..1 <br/> <a href="../String/">String</a></td>
+<td>1..1 <br/> <a href="xsd:string">xsd:string</a></td>
 <td>"A key property of a single dictionary entry</td>
 <td><a href="../DictionaryEntry/">DictionaryEntry</a></td>
 </tr>
 <tr>
 <td><a href="../value/">value</a></td>
-<td>1..1 <br/> <a href="../String/">String</a></td>
+<td>1..1 <br/> <a href="xsd:string">xsd:string</a></td>
 <td>A string value</td>
 <td><a href="../DictionaryEntry/">DictionaryEntry</a></td>
 </tr>
@@ -250,7 +254,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/linkmodel/uco-analysis</li>
+<li>from schema: https://w3id.org/lmodel/uco-types</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -263,11 +267,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>analysis:ControlledDictionaryEntry</td>
+<td>types:ControlledDictionaryEntry</td>
 </tr>
 <tr>
 <td>native</td>
-<td>analysis:ControlledDictionaryEntry</td>
+<td>types:ControlledDictionaryEntry</td>
 </tr>
 </tbody>
 </table>
@@ -278,8 +282,7 @@
 <pre><code class="language-yaml">name: ControlledDictionaryEntry
 description: '"A controlled dictionary entry is a single (term/key, value) pair where
   the term/key is constrained to an explicitly defined set of values."'
-from_schema: https://w3id.org/linkmodel/uco-analysis
-rank: 1000
+from_schema: https://w3id.org/lmodel/uco-types
 is_a: DictionaryEntry
 
 </code></pre>
@@ -289,15 +292,13 @@ is_a: DictionaryEntry
 <pre><code class="language-yaml">name: ControlledDictionaryEntry
 description: '"A controlled dictionary entry is a single (term/key, value) pair where
   the term/key is constrained to an explicitly defined set of values."'
-from_schema: https://w3id.org/linkmodel/uco-analysis
-rank: 1000
+from_schema: https://w3id.org/lmodel/uco-types
 is_a: DictionaryEntry
 attributes:
   key:
     name: key
     description: '"A key property of a single dictionary entry."'
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/lmodel/uco-types
     alias: key
     owner: ControlledDictionaryEntry
     domain_of:
@@ -309,8 +310,7 @@ attributes:
   value:
     name: value
     description: A string value.
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/lmodel/uco-core
     alias: value
     owner: ControlledDictionaryEntry
     domain_of:

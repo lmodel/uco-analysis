@@ -198,18 +198,26 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-actionestimationfacet">Class: ActionEstimationFacet</h1>
 <p><em>"An action estimation facet is a grouping of characteristics unique to decision-focused approximation aspects for an action that may potentially be performed."</em></p>
-<p>URI: <a href="https://w3id.org/lmodel/uco-analysis/ActionEstimationFacet">analysis:ActionEstimationFacet</a></p>
+<p>URI: <a href="action:ActionEstimationFacet">action:ActionEstimationFacet</a></p>
 <div class="mermaid"> classDiagram
     class ActionEstimationFacet
       Facet &lt;|-- ActionEstimationFacet
 
       ActionEstimationFacet : estimatedCost
 
+          ActionEstimationFacet ..&gt; string : estimatedCost
+
       ActionEstimationFacet : estimatedEfficacy
+
+          ActionEstimationFacet ..&gt; string : estimatedEfficacy
 
       ActionEstimationFacet : estimatedImpact
 
+          ActionEstimationFacet ..&gt; string : estimatedImpact
+
       ActionEstimationFacet : objective
+
+          ActionEstimationFacet ..&gt; string : objective
 
 
 </div>
@@ -239,25 +247,25 @@
 <tbody>
 <tr>
 <td><a href="../estimatedCost/">estimatedCost</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
 <td>"An estimation of the cost if the action is performed</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../estimatedEfficacy/">estimatedEfficacy</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
 <td>"An estimation of the effectiveness of the action at achieving its objective ...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../estimatedImpact/">estimatedImpact</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
 <td>"An estimation of the impact if the action is performed</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../objective/">objective</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
 <td>"The intended purpose for performing the action</td>
 <td>direct</td>
 </tr>
@@ -266,7 +274,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/linkmodel/uco-analysis</li>
+<li>from schema: https://w3id.org/linkmodel/uco-action</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -279,11 +287,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>analysis:ActionEstimationFacet</td>
+<td>action:ActionEstimationFacet</td>
 </tr>
 <tr>
 <td>native</td>
-<td>analysis:ActionEstimationFacet</td>
+<td>action:ActionEstimationFacet</td>
 </tr>
 </tbody>
 </table>
@@ -295,8 +303,7 @@
 description: '"An action estimation facet is a grouping of characteristics unique
   to decision-focused approximation aspects for an action that may potentially be
   performed."'
-from_schema: https://w3id.org/linkmodel/uco-analysis
-rank: 1000
+from_schema: https://w3id.org/linkmodel/uco-action
 is_a: Facet
 slots:
 - estimatedCost
@@ -312,15 +319,13 @@ slots:
 description: '"An action estimation facet is a grouping of characteristics unique
   to decision-focused approximation aspects for an action that may potentially be
   performed."'
-from_schema: https://w3id.org/linkmodel/uco-analysis
-rank: 1000
+from_schema: https://w3id.org/linkmodel/uco-action
 is_a: Facet
 attributes:
   estimatedCost:
     name: estimatedCost
     description: '"An estimation of the cost if the action is performed."'
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/linkmodel/uco-action
     alias: estimatedCost
     owner: ActionEstimationFacet
     domain_of:
@@ -330,8 +335,7 @@ attributes:
     name: estimatedEfficacy
     description: '"An estimation of the effectiveness of the action at achieving its
       objective if the action is performed."'
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/linkmodel/uco-action
     alias: estimatedEfficacy
     owner: ActionEstimationFacet
     domain_of:
@@ -340,8 +344,7 @@ attributes:
   estimatedImpact:
     name: estimatedImpact
     description: '"An estimation of the impact if the action is performed."'
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/linkmodel/uco-action
     alias: estimatedImpact
     owner: ActionEstimationFacet
     domain_of:
@@ -350,8 +353,7 @@ attributes:
   objective:
     name: objective
     description: '"The intended purpose for performing the action."'
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/linkmodel/uco-action
     alias: objective
     owner: ActionEstimationFacet
     domain_of:

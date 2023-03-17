@@ -208,7 +208,7 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-coitem">Class: CoItem</h1>
 <p><em>Element belonging to a bag</em></p>
-<p>URI: <a href="https://w3id.org/lmodel/uco-analysis/CoItem">analysis:CoItem</a></p>
+<p>URI: <a href="collections:CoItem">collections:CoItem</a></p>
 <div class="mermaid"> classDiagram
     class CoItem
       Thing &lt;|-- CoItem
@@ -290,7 +290,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/linkmodel/uco-analysis</li>
+<li>from schema: https://w3id.org/lmodel/collections</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -303,11 +303,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>analysis:CoItem</td>
+<td>collections:CoItem</td>
 </tr>
 <tr>
 <td>native</td>
-<td>analysis:CoItem</td>
+<td>collections:CoItem</td>
 </tr>
 <tr>
 <td>exact</td>
@@ -325,7 +325,7 @@
 <details>
 <pre><code class="language-yaml">name: CoItem
 description: Element belonging to a bag
-from_schema: https://w3id.org/linkmodel/uco-analysis
+from_schema: https://w3id.org/lmodel/collections
 aliases:
 - item
 exact_mappings:
@@ -335,7 +335,6 @@ exact_mappings:
 narrow_mappings:
 - AFC:0000167
 - NCIT:C51070
-rank: 1000
 is_a: Thing
 slots:
 - itemOf
@@ -346,7 +345,7 @@ slots:
 <details>
 <pre><code class="language-yaml">name: CoItem
 description: Element belonging to a bag
-from_schema: https://w3id.org/linkmodel/uco-analysis
+from_schema: https://w3id.org/lmodel/collections
 aliases:
 - item
 exact_mappings:
@@ -356,18 +355,16 @@ exact_mappings:
 narrow_mappings:
 - AFC:0000167
 - NCIT:C51070
-rank: 1000
 is_a: Thing
 attributes:
   itemOf:
     name: itemOf
     description: The link to a bag in which the item is member.
-    from_schema: https://w3id.org/linkmodel/uco-analysis
+    from_schema: https://w3id.org/lmodel/collections
     aliases:
     - is item of
     exact_mappings:
     - co:itemOf
-    rank: 1000
     domain: CoItem
     alias: itemOf
     owner: CoItem

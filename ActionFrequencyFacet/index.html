@@ -198,20 +198,26 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-actionfrequencyfacet">Class: ActionFrequencyFacet</h1>
 <p><em>"An action frequency facet is a grouping of characteristics unique to the frequency of occurrence for an action."</em></p>
-<p>URI: <a href="https://w3id.org/lmodel/uco-analysis/ActionFrequencyFacet">analysis:ActionFrequencyFacet</a></p>
+<p>URI: <a href="action:ActionFrequencyFacet">action:ActionFrequencyFacet</a></p>
 <div class="mermaid"> classDiagram
     class ActionFrequencyFacet
       Facet &lt;|-- ActionFrequencyFacet
 
       ActionFrequencyFacet : rate
 
+          ActionFrequencyFacet ..&gt; decimal type : rate
+
       ActionFrequencyFacet : scale
+
+          ActionFrequencyFacet ..&gt; string : scale
 
       ActionFrequencyFacet : trend
 
           ActionFrequencyFacet ..&gt; TrendEnum : trend
 
       ActionFrequencyFacet : units
+
+          ActionFrequencyFacet ..&gt; string : units
 
 
 </div>
@@ -247,13 +253,13 @@
 </tr>
 <tr>
 <td><a href="../scale/">scale</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
 <td>"The time scale utilized for the frequency rate count for the occurence of an...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../units/">units</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
 <td>"The units of measure utilized for the frequency rate count for the occurence...</td>
 <td>direct</td>
 </tr>
@@ -268,7 +274,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/linkmodel/uco-analysis</li>
+<li>from schema: https://w3id.org/linkmodel/uco-action</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -281,11 +287,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>analysis:ActionFrequencyFacet</td>
+<td>action:ActionFrequencyFacet</td>
 </tr>
 <tr>
 <td>native</td>
-<td>analysis:ActionFrequencyFacet</td>
+<td>action:ActionFrequencyFacet</td>
 </tr>
 </tbody>
 </table>
@@ -296,8 +302,7 @@
 <pre><code class="language-yaml">name: ActionFrequencyFacet
 description: '"An action frequency facet is a grouping of characteristics unique to
   the frequency of occurrence for an action."'
-from_schema: https://w3id.org/linkmodel/uco-analysis
-rank: 1000
+from_schema: https://w3id.org/linkmodel/uco-action
 is_a: Facet
 slots:
 - rate
@@ -341,8 +346,7 @@ slot_usage:
 <pre><code class="language-yaml">name: ActionFrequencyFacet
 description: '"An action frequency facet is a grouping of characteristics unique to
   the frequency of occurrence for an action."'
-from_schema: https://w3id.org/linkmodel/uco-analysis
-rank: 1000
+from_schema: https://w3id.org/linkmodel/uco-action
 is_a: Facet
 slot_usage:
   rate:
@@ -377,8 +381,7 @@ attributes:
   rate:
     name: rate
     description: '"The frequency rate for the occurence of an action."'
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/linkmodel/uco-action
     alias: rate
     owner: ActionFrequencyFacet
     domain_of:
@@ -391,8 +394,7 @@ attributes:
     name: scale
     description: '"The time scale utilized for the frequency rate count for the occurence
       of an action."'
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/linkmodel/uco-action
     alias: scale
     owner: ActionFrequencyFacet
     domain_of:
@@ -405,8 +407,7 @@ attributes:
     name: units
     description: '"The units of measure utilized for the frequency rate count for
       the occurence of an action."'
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/linkmodel/uco-action
     alias: units
     owner: ActionFrequencyFacet
     domain_of:
@@ -419,8 +420,7 @@ attributes:
     name: trend
     description: '"A characterization of the frequency trend for the occurence of
       an action."'
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/linkmodel/uco-action
     is_a: TrendVocab
     alias: trend
     owner: ActionFrequencyFacet

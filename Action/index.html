@@ -203,7 +203,7 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-action">Class: Action</h1>
 <p><em>"An action is something that may be done or performed."</em></p>
-<p>URI: <a href="https://w3id.org/lmodel/uco-analysis/Action">analysis:Action</a></p>
+<p>URI: <a href="action:Action">action:Action</a></p>
 <div class="mermaid"> classDiagram
     class Action
       UcoObject &lt;|-- Action
@@ -216,15 +216,23 @@
 
       Action : actionCount
 
+          Action ..&gt; non negative integer type : actionCount
+
       Action : actionStatus
 
           Action ..&gt; ActionStatusTypeEnum : actionStatus
 
       Action : createdBy
 
+          Action ..&gt; string : createdBy
+
       Action : description
 
+          Action ..&gt; string : description
+
       Action : endTime
+
+          Action ..&gt; datetime : endTime
 
       Action : environment
 
@@ -236,7 +244,11 @@
 
       Action : externalReference
 
+          Action ..&gt; string : externalReference
+
       Action : hasFacet
+
+          Action ..&gt; string : hasFacet
 
       Action : instrument
 
@@ -248,13 +260,19 @@
 
       Action : modifiedTime
 
+          Action ..&gt; datetime : modifiedTime
+
       Action : name
+
+          Action ..&gt; string : name
 
       Action : object
 
           Action ..&gt; UcoObject : object
 
       Action : objectCreatedTime
+
+          Action ..&gt; datetime : objectCreatedTime
 
       Action : objectMarking
 
@@ -274,13 +292,19 @@
 
       Action : specVersion
 
+          Action ..&gt; string : specVersion
+
       Action : startTime
+
+          Action ..&gt; datetime : startTime
 
       Action : subaction
 
           Action ..&gt; Action : subaction
 
       Action : tag
+
+          Action ..&gt; string : tag
 
 
 </div>
@@ -366,13 +390,13 @@
 </tr>
 <tr>
 <td><a href="../endTime/">endTime</a></td>
-<td>0..1 <br/> <a href="../Datetime/">Datetime</a></td>
+<td>0..1 <br/> <a href="xsd:dateTime">xsd:dateTime</a></td>
 <td>The ending time of a time range</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../startTime/">startTime</a></td>
-<td>0..1 <br/> <a href="../Datetime/">Datetime</a></td>
+<td>0..1 <br/> <a href="xsd:dateTime">xsd:dateTime</a></td>
 <td>The initial time of a time range</td>
 <td>direct</td>
 </tr>
@@ -390,37 +414,37 @@
 </tr>
 <tr>
 <td><a href="../createdBy/">createdBy</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
 <td>The identity that created a characterization of a concept</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../description/">description</a></td>
-<td>0..* <br/> <a href="../String/">String</a></td>
+<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
 <td>A description of a particular concept characterization</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../externalReference/">externalReference</a></td>
-<td>0..* <br/> <a href="../String/">String</a></td>
+<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
 <td>Specifies a reference to a resource outside of the UCO</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../hasFacet/">hasFacet</a></td>
-<td>0..* <br/> <a href="../String/">String</a></td>
+<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
 <td>Further sets of properties characterizing a concept based on the particular c...</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../modifiedTime/">modifiedTime</a></td>
-<td>0..* <br/> <a href="../Datetime/">Datetime</a></td>
+<td>0..* <br/> <a href="xsd:dateTime">xsd:dateTime</a></td>
 <td>Specifies the time that this particular version of the object was modified</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../name/">name</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
 <td>The name of a particular concept characterization</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
@@ -432,19 +456,19 @@
 </tr>
 <tr>
 <td><a href="../objectCreatedTime/">objectCreatedTime</a></td>
-<td>0..1 <br/> <a href="../Datetime/">Datetime</a></td>
+<td>0..1 <br/> <a href="xsd:dateTime">xsd:dateTime</a></td>
 <td>The time at which a characterization of a concept is created</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../specVersion/">specVersion</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
 <td>The version of UCO ontology or subontology specification used to characterize...</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
 <tr>
 <td><a href="../tag/">tag</a></td>
-<td>0..* <br/> <a href="../String/">String</a></td>
+<td>0..* <br/> <a href="xsd:string">xsd:string</a></td>
 <td>A generic tag/label</td>
 <td><a href="../UcoObject/">UcoObject</a></td>
 </tr>
@@ -496,7 +520,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/linkmodel/uco-analysis</li>
+<li>from schema: https://w3id.org/linkmodel/uco-action</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -509,11 +533,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>analysis:Action</td>
+<td>action:Action</td>
 </tr>
 <tr>
 <td>native</td>
-<td>analysis:Action</td>
+<td>action:Action</td>
 </tr>
 <tr>
 <td>exact</td>
@@ -531,14 +555,13 @@
 <details>
 <pre><code class="language-yaml">name: Action
 description: '"An action is something that may be done or performed."'
-from_schema: https://w3id.org/linkmodel/uco-analysis
+from_schema: https://w3id.org/linkmodel/uco-action
 exact_mappings:
 - wikidata:Q4026292
 - NCIT:C25404
 - om:Action
 narrow_mappings:
 - NCIT:C162846
-rank: 1000
 is_a: UcoObject
 slots:
 - subaction
@@ -616,14 +639,13 @@ slot_usage:
 <details>
 <pre><code class="language-yaml">name: Action
 description: '"An action is something that may be done or performed."'
-from_schema: https://w3id.org/linkmodel/uco-analysis
+from_schema: https://w3id.org/linkmodel/uco-action
 exact_mappings:
 - wikidata:Q4026292
 - NCIT:C25404
 - om:Action
 narrow_mappings:
 - NCIT:C162846
-rank: 1000
 is_a: UcoObject
 slot_usage:
   subaction:
@@ -685,8 +707,7 @@ attributes:
     name: subaction
     description: '"References to other actions that make up part of a larger more
       complex action."'
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/linkmodel/uco-action
     multivalued: true
     alias: subaction
     owner: Action
@@ -696,8 +717,7 @@ attributes:
   environment:
     name: environment
     description: '"The environment wherein an action occurs."'
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/linkmodel/uco-action
     alias: environment
     owner: Action
     domain_of:
@@ -706,8 +726,7 @@ attributes:
   performer:
     name: performer
     description: '"The primary performer of an action."'
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/linkmodel/uco-action
     alias: performer
     owner: Action
     domain_of:
@@ -717,8 +736,7 @@ attributes:
     name: error
     description: '"A characterization of the differences between the expected and
       the actual performance of the action."'
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/linkmodel/uco-action
     multivalued: true
     alias: error
     owner: Action
@@ -729,8 +747,7 @@ attributes:
   instrument:
     name: instrument
     description: '"The things used to perform an action."'
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/linkmodel/uco-action
     multivalued: true
     alias: instrument
     owner: Action
@@ -740,8 +757,7 @@ attributes:
   object:
     name: object
     description: '"The things that the action is performed on/against."'
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/lmodel/uco-core
     multivalued: true
     alias: object
     owner: Action
@@ -754,8 +770,7 @@ attributes:
   participant:
     name: participant
     description: '"The supporting (non-primary) performers of an action."'
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/linkmodel/uco-action
     multivalued: true
     alias: participant
     owner: Action
@@ -765,8 +780,7 @@ attributes:
   result:
     name: result
     description: '"The things resulting from performing an action."'
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/linkmodel/uco-action
     multivalued: true
     alias: result
     owner: Action
@@ -776,8 +790,7 @@ attributes:
   location:
     name: location
     description: '"The locations where an action occurs."'
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/linkmodel/uco-action
     multivalued: true
     alias: location
     owner: Action
@@ -787,8 +800,7 @@ attributes:
   endTime:
     name: endTime
     description: '"The time at which performance of the action ended."'
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/lmodel/uco-core
     alias: endTime
     owner: Action
     domain_of:
@@ -799,8 +811,7 @@ attributes:
   startTime:
     name: startTime
     description: '"The time at which performance of the action began."'
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/lmodel/uco-core
     alias: startTime
     owner: Action
     domain_of:
@@ -811,8 +822,7 @@ attributes:
   actionCount:
     name: actionCount
     description: '"The number of times that the action was performed."'
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/linkmodel/uco-action
     alias: actionCount
     owner: Action
     domain_of:
@@ -822,8 +832,7 @@ attributes:
   actionStatus:
     name: actionStatus
     description: '"The current state of the action."'
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/linkmodel/uco-action
     is_a: ActionStatusTypeVocab
     alias: actionStatus
     owner: Action
@@ -833,8 +842,7 @@ attributes:
   createdBy:
     name: createdBy
     description: The identity that created a characterization of a concept.
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/lmodel/uco-core
     domain: IdentityAbstraction
     alias: createdBy
     owner: Action
@@ -845,8 +853,7 @@ attributes:
   description:
     name: description
     description: A description of a particular concept characterization.
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/lmodel/uco-core
     multivalued: true
     alias: description
     owner: Action
@@ -856,8 +863,7 @@ attributes:
   externalReference:
     name: externalReference
     description: Specifies a reference to a resource outside of the UCO.
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/lmodel/uco-core
     domain: ExternalReference
     multivalued: true
     alias: externalReference
@@ -872,8 +878,7 @@ attributes:
     description: Further sets of properties characterizing a concept based on the
       particular context of the class and of the particular instance of the concept
       being characterized.
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/lmodel/uco-core
     domain: Facet
     multivalued: true
     alias: hasFacet
@@ -890,8 +895,7 @@ attributes:
       property. Object creators MUST update the modified property when creating a
       new version of an object. The modified timestamp MUST be precise to the nearest
       millisecond (exactly three digits after the decimal place in seconds).
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/lmodel/uco-core
     multivalued: true
     alias: modifiedTime
     owner: Action
@@ -901,8 +905,7 @@ attributes:
   name:
     name: name
     description: The name of a particular concept characterization.
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/lmodel/uco-core
     alias: name
     owner: Action
     domain_of:
@@ -913,8 +916,7 @@ attributes:
     name: objectMarking
     description: Marking definitions to be applied to a particular concept characterization
       in its entirety.
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/lmodel/uco-core
     multivalued: true
     alias: objectMarking
     owner: Action
@@ -926,8 +928,7 @@ attributes:
     description: The time at which a characterization of a concept is created. This
       time pertains to the time of creating the record object, and is not an intrinsic
       characteristic of the concept.
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/lmodel/uco-core
     alias: objectCreatedTime
     owner: Action
     domain_of:
@@ -938,8 +939,7 @@ attributes:
     name: specVersion
     description: The version of UCO ontology or subontology specification used to
       characterize a concept.
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/lmodel/uco-core
     alias: specVersion
     owner: Action
     domain_of:
@@ -949,8 +949,7 @@ attributes:
   tag:
     name: tag
     description: A generic tag/label.
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/lmodel/uco-core
     multivalued: true
     alias: tag
     owner: Action

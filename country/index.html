@@ -319,7 +319,7 @@
 
 <h1 id="slot-country">Slot: country</h1>
 <p><em>The name of the geolocation country.</em></p>
-<p>URI: <a href="https://w3id.org/lmodel/uco-analysis/country">analysis:country</a></p>
+<p>URI: <a href="location:country">location:country</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -339,24 +339,23 @@
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../String/">String</a></li>
+<li>Range: <a href="xsd:string">xsd:string</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/linkmodel/uco-analysis</li>
+<li>from schema: https://w3id.org/lmodel/ucolink-location</li>
 </ul>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
 <pre><code class="language-yaml">name: country
 description: The name of the geolocation country.
-from_schema: https://w3id.org/linkmodel/uco-analysis
+from_schema: https://w3id.org/lmodel/ucolink-location
 exact_mappings:
 - NCIT:C25464
 - SIO:000664
 - wikidata:Q6256
-rank: 1000
 alias: country
 domain_of:
 - SimpleAddressFacet

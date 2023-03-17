@@ -198,16 +198,22 @@
 <article class="md-content__inner md-typeset">
 <h1 id="class-latlongcoordinatesfacet">Class: LatLongCoordinatesFacet</h1>
 <p>_A lat long coordinates facet is a grouping of characteristics unique to the expression of a geolocation as the intersection of specific latitude, longitude, and altitude values. _</p>
-<p>URI: <a href="https://w3id.org/lmodel/uco-analysis/LatLongCoordinatesFacet">analysis:LatLongCoordinatesFacet</a></p>
+<p>URI: <a href="location:LatLongCoordinatesFacet">location:LatLongCoordinatesFacet</a></p>
 <div class="mermaid"> classDiagram
     class LatLongCoordinatesFacet
       Facet &lt;|-- LatLongCoordinatesFacet
 
       LatLongCoordinatesFacet : altitude
 
+          LatLongCoordinatesFacet ..&gt; decimal type : altitude
+
       LatLongCoordinatesFacet : latitude
 
+          LatLongCoordinatesFacet ..&gt; decimal type : latitude
+
       LatLongCoordinatesFacet : longitude
+
+          LatLongCoordinatesFacet ..&gt; decimal type : longitude
 
 
 </div>
@@ -258,7 +264,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/linkmodel/uco-analysis</li>
+<li>from schema: https://w3id.org/lmodel/ucolink-location</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -271,11 +277,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>analysis:LatLongCoordinatesFacet</td>
+<td>location:LatLongCoordinatesFacet</td>
 </tr>
 <tr>
 <td>native</td>
-<td>analysis:LatLongCoordinatesFacet</td>
+<td>location:LatLongCoordinatesFacet</td>
 </tr>
 </tbody>
 </table>
@@ -287,8 +293,7 @@
 description: 'A lat long coordinates facet is a grouping of characteristics unique
   to the expression of a geolocation as the intersection of specific latitude, longitude,
   and altitude values. '
-from_schema: https://w3id.org/linkmodel/uco-analysis
-rank: 1000
+from_schema: https://w3id.org/lmodel/ucolink-location
 is_a: Facet
 slots:
 - altitude
@@ -319,8 +324,7 @@ slot_usage:
 description: 'A lat long coordinates facet is a grouping of characteristics unique
   to the expression of a geolocation as the intersection of specific latitude, longitude,
   and altitude values. '
-from_schema: https://w3id.org/linkmodel/uco-analysis
-rank: 1000
+from_schema: https://w3id.org/lmodel/ucolink-location
 is_a: Facet
 slot_usage:
   altitude:
@@ -342,8 +346,7 @@ attributes:
   altitude:
     name: altitude
     description: The altitude coordinate of a geolocation.
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/lmodel/ucolink-location
     alias: altitude
     owner: LatLongCoordinatesFacet
     domain_of:
@@ -353,8 +356,7 @@ attributes:
   latitude:
     name: latitude
     description: The latitude coordinate of a geolocation.
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/lmodel/ucolink-location
     alias: latitude
     owner: LatLongCoordinatesFacet
     domain_of:
@@ -364,8 +366,7 @@ attributes:
   longitude:
     name: longitude
     description: The longitude coordinate of a geolocation.
-    from_schema: https://w3id.org/linkmodel/uco-analysis
-    rank: 1000
+    from_schema: https://w3id.org/lmodel/ucolink-location
     alias: longitude
     owner: LatLongCoordinatesFacet
     domain_of:
