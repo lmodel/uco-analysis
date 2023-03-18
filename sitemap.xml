@@ -781,6 +781,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://lmodel.github.io/uco-analysis/about/</loc>
+         <lastmod>2023-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://lmodel.github.io/uco-analysis/action/</loc>
          <lastmod>2023-03-18</lastmod>
          <changefreq>daily</changefreq>
