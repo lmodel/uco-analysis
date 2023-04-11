@@ -1,0 +1,6 @@
+name: uco_analysis
+author: Noel McLoughlin <noel.mcloughlin@gmail.com>
+description: This ontology defines classes and properties for characterizing analytic actions and results.
+source_schema_path: src/uco_analysis/schema/uco_analysis.yaml
+google_sheet_id: 1wVoaiFg47aT9YWNeRfTZ8tYHN8s8PAuDx5i2HUcDpvQ
+google_sheet_tabs: Analysis enums

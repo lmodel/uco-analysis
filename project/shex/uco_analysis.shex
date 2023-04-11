@@ -1,0 +1,623 @@
+BASE <https://w3id.org/lmodel/uco-analysis/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX linkml: <https://w3id.org/linkml/>
+PREFIX action: <https://w3id.org/lmodel/uco-action/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX core: <https://w3id.org/lmodel/uco-core/>
+PREFIX location: <https://w3id.org/lmodel/uco-location/>
+PREFIX pattern: <https://w3id.org/lmodel/uco-pattern/>
+PREFIX types: <https://w3id.org/lmodel/uco-types/>
+PREFIX vocabulary: <https://w3id.org/lmodel/uco-vocabulary/>
+PREFIX collections: <https://w3id.org/lmodel/collections/>
+
+
+linkml:String xsd:string
+
+linkml:Integer xsd:integer
+
+linkml:Boolean xsd:boolean
+
+linkml:Float xsd:float
+
+linkml:Double xsd:double
+
+linkml:Decimal xsd:decimal
+
+linkml:Time xsd:dateTime
+
+linkml:Date xsd:date
+
+linkml:Datetime xsd:dateTime
+
+linkml:DateOrDatetime linkml:DateOrDatetime
+
+linkml:Uriorcurie IRI
+
+linkml:Curie xsd:string
+
+linkml:Uri IRI
+
+linkml:Ncname xsd:string
+
+linkml:Objectidentifier IRI
+
+linkml:Nodeidentifier NONLITERAL
+
+core:StringType xsd:string
+
+core:LiteralType rdf:literal
+
+core:NonNegativeIntegerType xsd:nonNegativeInteger
+
+core:StatementType xsd:string
+
+core:IriType IRI
+
+core:BooleanType xsd:boolean
+
+core:HexBinaryType xsd:hexBinary
+
+location:DecimalType xsd:decimal
+
+collections:PositiveInteger xsd:positiveInteger
+
+action:Action  (
+    CLOSED {
+       (  $action:Action_tes (  &core:UcoObject_tes ;
+             rdf:type [ core:UcoObject ] ? ;
+             action:subaction @action:Action * ;
+             action:environment @core:UcoObject ? ;
+             action:performer @core:UcoObject ? ;
+             action:error @core:UcoObject * ;
+             action:instrument @core:UcoObject * ;
+             core:object @core:UcoObject * ;
+             action:participant @core:UcoObject * ;
+             action:result @core:UcoObject * ;
+             action:location @location:Location * ;
+             core:endTime @linkml:Datetime ? ;
+             core:startTime @linkml:Datetime ? ;
+             action:actionCount @core:NonNegativeIntegerType ? ;
+             action:actionStatus @vocabulary:ActionStatusTypeEnum ?
+          ) ;
+          rdf:type [ action:Action ] ?
+       )
+    } OR @action:ActionLifecycle OR @action:ActionPattern OR @<Analysis>
+)
+
+action:ActionArgumentFacet CLOSED {
+    (  $action:ActionArgumentFacet_tes (  &core:Facet_tes ;
+          rdf:type [ core:Facet ] ? ;
+          action:argumentName @linkml:String ;
+          core:value @linkml:String
+       ) ;
+       rdf:type [ action:ActionArgumentFacet ] ?
+    )
+}
+
+action:ActionEstimationFacet CLOSED {
+    (  $action:ActionEstimationFacet_tes (  &core:Facet_tes ;
+          rdf:type [ core:Facet ] ? ;
+          action:estimatedCost @linkml:String ? ;
+          action:estimatedEfficacy @linkml:String ? ;
+          action:estimatedImpact @linkml:String ? ;
+          action:objective @linkml:String ?
+       ) ;
+       rdf:type [ action:ActionEstimationFacet ] ?
+    )
+}
+
+action:ActionFrequencyFacet CLOSED {
+    (  $action:ActionFrequencyFacet_tes (  &core:Facet_tes ;
+          rdf:type [ core:Facet ] ? ;
+          action:rate @location:DecimalType ;
+          action:scale @linkml:String ;
+          action:units @linkml:String ;
+          action:trend @vocabulary:TrendEnum
+       ) ;
+       rdf:type [ action:ActionFrequencyFacet ] ?
+    )
+}
+
+action:ActionLifecycle CLOSED {
+    (  $action:ActionLifecycle_tes (  &action:Action_tes ;
+          rdf:type [ action:Action ] ? ;
+          action:phase @action:ArrayOfAction ;
+          action:error @core:UcoObject ? ;
+          core:endTime @linkml:Datetime ? ;
+          core:startTime @linkml:Datetime ? ;
+          action:actionCount @core:NonNegativeIntegerType ? ;
+          action:actionStatus @vocabulary:ActionStatusTypeEnum ?
+       ) ;
+       rdf:type [ action:ActionLifecycle ] ?
+    )
+}
+
+action:ActionPattern CLOSED {
+    (  $action:ActionPattern_tes (  &action:Action_tes ;
+          rdf:type [ action:Action ] ? ;
+          &pattern:Pattern_tes ;
+          rdf:type [ pattern:Pattern ] ?
+       ) ;
+       rdf:type [ action:ActionPattern ] ?
+    )
+}
+
+<Analysis> CLOSED {
+    (  $<Analysis_tes> (  &action:Action_tes ;
+          rdf:type [ action:Action ] ?
+       ) ;
+       rdf:type [ <Analysis> ] ?
+    )
+}
+
+<AnalyticResult> CLOSED {
+    (  $<AnalyticResult_tes> (  &core:Assertion_tes ;
+          rdf:type [ core:Assertion ] ? ;
+          <originatingAnalysis> @<Analysis> ? ;
+          <resultContent> @core:UcoObject *
+       ) ;
+       rdf:type [ <AnalyticResult> ] ?
+    )
+}
+
+<AnalyticResultFacet>  (
+    CLOSED {
+       (  $<AnalyticResultFacet_tes> (  &core:Facet_tes ;
+             rdf:type [ core:Facet ] ?
+          ) ;
+          rdf:type [ <AnalyticResultFacet> ] ?
+       )
+    } OR @<ArtifactClassificationResultFacet>
+)
+
+core:Annotation CLOSED {
+    (  $core:Annotation_tes (  &core:Assertion_tes ;
+          rdf:type [ core:Assertion ] ? ;
+          core:object @core:UcoObject +
+       ) ;
+       rdf:type [ core:Annotation ] ?
+    )
+}
+
+action:ArrayOfAction CLOSED {
+    (  $action:ArrayOfAction_tes (  &core:UcoInherentCharacterizationThing_tes ;
+          rdf:type [ core:UcoInherentCharacterizationThing ] ? ;
+          action:action @action:Action ?
+       ) ;
+       rdf:type [ action:ArrayOfAction ] ?
+    )
+}
+
+<ArtifactClassification> CLOSED {
+    (  $<ArtifactClassification_tes> (  &core:UcoInherentCharacterizationThing_tes ;
+          rdf:type [ core:UcoInherentCharacterizationThing ] ? ;
+          <classificationConfidence> @location:DecimalType ? ;
+          <class> @linkml:String ?
+       ) ;
+       rdf:type [ <ArtifactClassification> ] ?
+    )
+}
+
+<ArtifactClassificationResultFacet> CLOSED {
+    (  $<ArtifactClassificationResultFacet_tes> (  &<AnalyticResultFacet_tes> ;
+          rdf:type [ <AnalyticResultFacet> ] ? ;
+          <classification> @<ArtifactClassification> *
+       ) ;
+       rdf:type [ <ArtifactClassificationResultFacet> ] ?
+    )
+}
+
+core:Assertion  (
+    CLOSED {
+       (  $core:Assertion_tes (  &core:UcoObject_tes ;
+             rdf:type [ core:UcoObject ] ? ;
+             core:statement @linkml:String *
+          ) ;
+          rdf:type [ core:Assertion ] ?
+       )
+    } OR @<AnalyticResult> OR @core:Annotation
+)
+
+core:AttributedName CLOSED {
+    (  $core:AttributedName_tes (  &core:UcoObject_tes ;
+          rdf:type [ core:UcoObject ] ? ;
+          core:namingAuthority @linkml:String ?
+       ) ;
+       rdf:type [ core:AttributedName ] ?
+    )
+}
+
+collections:Bag  (
+    CLOSED {
+       (  $collections:Bag_tes (  &collections:Collection_tes ;
+             rdf:type [ collections:Collection ] ?
+          ) ;
+          rdf:type [ collections:Bag ] ?
+       )
+    } OR @collections:List OR @types:Thread
+)
+
+core:Bundle CLOSED {
+    (  $core:Bundle_tes (  &core:EnclosingCompilation_tes ;
+          rdf:type [ core:EnclosingCompilation ] ?
+       ) ;
+       rdf:type [ core:Bundle ] ?
+    )
+}
+
+collections:CoItem  (
+    CLOSED {
+       (  $collections:CoItem_tes (  &collections:Thing_tes ;
+             rdf:type [ collections:Thing ] ? ;
+             collections:itemOf @collections:Bag ?
+          ) ;
+          rdf:type [ collections:CoItem ] ?
+       )
+    } OR @collections:ListItem
+)
+
+collections:Collection  (
+    CLOSED {
+       (  $collections:Collection_tes (  &collections:Thing_tes ;
+             rdf:type [ collections:Thing ] ? ;
+             collections:size @collections:PositiveInteger ?
+          ) ;
+          rdf:type [ collections:Collection ] ?
+       )
+    } OR @collections:Bag OR @collections:Set
+)
+
+core:Compilation  (
+    CLOSED {
+       (  $core:Compilation_tes (  &core:UcoObject_tes ;
+             rdf:type [ core:UcoObject ] ?
+          ) ;
+          rdf:type [ core:Compilation ] ?
+       )
+    } OR @core:ContextualCompilation OR @core:EnclosingCompilation
+)
+
+core:ConfidenceFacet CLOSED {
+    (  $core:ConfidenceFacet_tes (  &core:Facet_tes ;
+          rdf:type [ core:Facet ] ? ;
+          core:confidence @core:NonNegativeIntegerType
+       ) ;
+       rdf:type [ core:ConfidenceFacet ] ?
+    )
+}
+
+core:ContextualCompilation  (
+    CLOSED {
+       (  $core:ContextualCompilation_tes (  &core:Compilation_tes ;
+             rdf:type [ core:Compilation ] ? ;
+             core:object @core:UcoObject +
+          ) ;
+          rdf:type [ core:ContextualCompilation ] ?
+       )
+    } OR @core:Grouping
+)
+
+types:ControlledDictionary CLOSED {
+    (  $types:ControlledDictionary_tes (  &types:Dictionary_tes ;
+          rdf:type [ types:Dictionary ] ? ;
+          types:entry @types:DictionaryEntry *
+       ) ;
+       rdf:type [ types:ControlledDictionary ] ?
+    )
+}
+
+types:ControlledDictionaryEntry CLOSED {
+    (  $types:ControlledDictionaryEntry_tes (  &types:DictionaryEntry_tes ;
+          rdf:type [ types:DictionaryEntry ] ?
+       ) ;
+       rdf:type [ types:ControlledDictionaryEntry ] ?
+    )
+}
+
+core:ControlledVocabulary CLOSED {
+    (  $core:ControlledVocabulary_tes (  &core:UcoObject_tes ;
+          rdf:type [ core:UcoObject ] ? ;
+          core:constrainingVocabularyReference @core:IriType ? ;
+          core:constrainingVocabularyName @linkml:String ? ;
+          core:value @linkml:String
+       ) ;
+       rdf:type [ core:ControlledVocabulary ] ?
+    )
+}
+
+types:Dictionary  (
+    CLOSED {
+       (  $types:Dictionary_tes (  &core:UcoInherentCharacterizationThing_tes ;
+             rdf:type [ core:UcoInherentCharacterizationThing ] ? ;
+             types:entry @types:DictionaryEntry +
+          ) ;
+          rdf:type [ types:Dictionary ] ?
+       )
+    } OR @types:ControlledDictionary
+)
+
+types:DictionaryEntry  (
+    CLOSED {
+       (  $types:DictionaryEntry_tes (  &core:UcoInherentCharacterizationThing_tes ;
+             rdf:type [ core:UcoInherentCharacterizationThing ] ? ;
+             types:key @linkml:String ;
+             core:value @linkml:String
+          ) ;
+          rdf:type [ types:DictionaryEntry ] ?
+       )
+    } OR @types:ControlledDictionaryEntry
+)
+
+core:EnclosingCompilation  (
+    CLOSED {
+       (  $core:EnclosingCompilation_tes (  &core:Compilation_tes ;
+             rdf:type [ core:Compilation ] ? ;
+             core:object @core:UcoObject *
+          ) ;
+          rdf:type [ core:EnclosingCompilation ] ?
+       )
+    } OR @core:Bundle
+)
+
+core:ExternalReference CLOSED {
+    (  $core:ExternalReference_tes (  &core:UcoInherentCharacterizationThing_tes ;
+          rdf:type [ core:UcoInherentCharacterizationThing ] ? ;
+          core:referenceURL @core:IriType ? ;
+          core:definingContext @linkml:String ? ;
+          core:externalIdentifier @linkml:String ?
+       ) ;
+       rdf:type [ core:ExternalReference ] ?
+    )
+}
+
+core:Facet  (
+    @action:ActionArgumentFacet OR @action:ActionEstimationFacet OR @action:ActionFrequencyFacet OR @<AnalyticResultFacet> OR
+    @core:ConfidenceFacet OR @location:GPSCoordinatesFacet OR @location:LatLongCoordinatesFacet OR @location:SimpleAddressFacet
+)
+
+core:Facet_struct {
+    (  $core:Facet_tes (  &core:UcoInherentCharacterizationThing_tes ;
+          rdf:type [ core:UcoInherentCharacterizationThing ] ?
+       ) ;
+       rdf:type [ core:Facet ] ?
+    )
+}
+
+location:GPSCoordinatesFacet CLOSED {
+    (  $location:GPSCoordinatesFacet_tes (  &core:Facet_tes ;
+          rdf:type [ core:Facet ] ? ;
+          location:hdop @location:DecimalType ? ;
+          location:pdop @location:DecimalType ? ;
+          location:tdop @location:DecimalType ? ;
+          location:vdop @location:DecimalType ?
+       ) ;
+       rdf:type [ location:GPSCoordinatesFacet ] ?
+    )
+}
+
+core:Grouping CLOSED {
+    (  $core:Grouping_tes (  &core:ContextualCompilation_tes ;
+          rdf:type [ core:ContextualCompilation ] ? ;
+          core:context @linkml:String *
+       ) ;
+       rdf:type [ core:Grouping ] ?
+    )
+}
+
+types:Hash CLOSED {
+    (  $types:Hash_tes (  &core:UcoInherentCharacterizationThing_tes ;
+          rdf:type [ core:UcoInherentCharacterizationThing ] ? ;
+          types:hashValue @core:HexBinaryType ;
+          types:hashMethod @linkml:String
+       ) ;
+       rdf:type [ types:Hash ] ?
+    )
+}
+
+core:IdentityAbstraction CLOSED {
+    (  $core:IdentityAbstraction_tes (  &core:UcoObject_tes ;
+          rdf:type [ core:UcoObject ] ?
+       ) ;
+       rdf:type [ core:IdentityAbstraction ] ?
+    )
+}
+
+core:Item CLOSED {
+    (  $core:Item_tes (  &core:UcoObject_tes ;
+          rdf:type [ core:UcoObject ] ?
+       ) ;
+       rdf:type [ core:Item ] ?
+    )
+}
+
+location:LatLongCoordinatesFacet CLOSED {
+    (  $location:LatLongCoordinatesFacet_tes (  &core:Facet_tes ;
+          rdf:type [ core:Facet ] ? ;
+          location:altitude @location:DecimalType ? ;
+          location:latitude @location:DecimalType ? ;
+          location:longitude @location:DecimalType ?
+       ) ;
+       rdf:type [ location:LatLongCoordinatesFacet ] ?
+    )
+}
+
+collections:List CLOSED {
+    (  $collections:List_tes (  &collections:Bag_tes ;
+          rdf:type [ collections:Bag ] ? ;
+          collections:lastItem @collections:ListItem ? ;
+          collections:firstItem @collections:ListItem ?
+       ) ;
+       rdf:type [ collections:List ] ?
+    )
+}
+
+collections:ListItem CLOSED {
+    (  $collections:ListItem_tes (  &collections:CoItem_tes ;
+          rdf:type [ collections:CoItem ] ? ;
+          collections:_index @collections:PositiveInteger
+       ) ;
+       rdf:type [ collections:ListItem ] ?
+    )
+}
+
+location:Location CLOSED {
+    (  $location:Location_tes (  &core:UcoObject_tes ;
+          rdf:type [ core:UcoObject ] ?
+       ) ;
+       rdf:type [ location:Location ] ?
+    )
+}
+
+pattern:LogicalPattern CLOSED {
+    (  $pattern:LogicalPattern_tes (  &pattern:Pattern_tes ;
+          rdf:type [ pattern:Pattern ] ? ;
+          pattern:patternExpression @linkml:String ?
+       ) ;
+       rdf:type [ pattern:LogicalPattern ] ?
+    )
+}
+
+core:MarkingDefinitionAbstraction CLOSED {
+    (  $core:MarkingDefinitionAbstraction_tes (  &core:UcoObject_tes ;
+          rdf:type [ core:UcoObject ] ?
+       ) ;
+       rdf:type [ core:MarkingDefinitionAbstraction ] ?
+    )
+}
+
+core:ModusOperandi CLOSED {
+    (  $core:ModusOperandi_tes (  &core:UcoObject_tes ;
+          rdf:type [ core:UcoObject ] ?
+       ) ;
+       rdf:type [ core:ModusOperandi ] ?
+    )
+}
+
+pattern:Pattern  (
+    CLOSED {
+       (  $pattern:Pattern_tes (  &core:UcoObject_tes ;
+             rdf:type [ core:UcoObject ] ?
+          ) ;
+          rdf:type [ pattern:Pattern ] ?
+       )
+    } OR @pattern:LogicalPattern
+)
+
+pattern:PatternExpression CLOSED {
+    (  $pattern:PatternExpression_tes (  &core:UcoInherentCharacterizationThing_tes ;
+          rdf:type [ core:UcoInherentCharacterizationThing ] ?
+       ) ;
+       rdf:type [ pattern:PatternExpression ] ?
+    )
+}
+
+core:Relationship CLOSED {
+    (  $core:Relationship_tes (  &core:UcoObject_tes ;
+          rdf:type [ core:UcoObject ] ? ;
+          core:endTime @linkml:Datetime * ;
+          core:isDirectional @core:BooleanType ;
+          core:kindOfRelationship @linkml:String ? ;
+          core:source @core:UcoObject + ;
+          core:startTime @linkml:Datetime * ;
+          core:target @core:UcoObject
+       ) ;
+       rdf:type [ core:Relationship ] ?
+    )
+}
+
+collections:Set CLOSED {
+    (  $collections:Set_tes (  &collections:Collection_tes ;
+          rdf:type [ collections:Collection ] ?
+       ) ;
+       rdf:type [ collections:Set ] ?
+    )
+}
+
+location:SimpleAddressFacet CLOSED {
+    (  $location:SimpleAddressFacet_tes (  &core:Facet_tes ;
+          rdf:type [ core:Facet ] ? ;
+          location:addressType @linkml:String ? ;
+          location:country @linkml:String ? ;
+          location:locality @linkml:String ? ;
+          location:postalCode @linkml:String ? ;
+          location:region @linkml:String ? ;
+          location:street @linkml:String ?
+       ) ;
+       rdf:type [ location:SimpleAddressFacet ] ?
+    )
+}
+
+collections:Thing  (
+    @collections:CoItem OR @collections:Collection
+)
+
+collections:Thing_struct {
+    (  $collections:Thing_tes rdf:type . * ;
+       rdf:type [ collections:Thing ] ?
+    )
+}
+
+types:Thread CLOSED {
+    (  $types:Thread_tes (  &collections:Bag_tes ;
+          rdf:type [ collections:Bag ] ? ;
+          &core:UcoThing_tes ;
+          rdf:type [ core:UcoThing ] ?
+       ) ;
+       rdf:type [ types:Thread ] ?
+    )
+}
+
+types:ThreadItem CLOSED {
+    (  $types:ThreadItem_tes (  &core:UcoThing_tes ;
+          rdf:type [ core:UcoThing ] ?
+       ) ;
+       rdf:type [ collections:CoItem ] ?
+    )
+}
+
+core:UcoInherentCharacterizationThing  (
+    CLOSED {
+       (  $core:UcoInherentCharacterizationThing_tes (  &core:UcoThing_tes ;
+             rdf:type [ core:UcoThing ] ?
+          ) ;
+          rdf:type [ core:UcoInherentCharacterizationThing ] ?
+       )
+    } OR @action:ArrayOfAction OR @<ArtifactClassification> OR @types:Dictionary OR @types:DictionaryEntry OR
+    @core:ExternalReference OR @core:Facet OR @types:Hash OR @pattern:PatternExpression
+)
+
+core:UcoObject  (
+    CLOSED {
+       (  $core:UcoObject_tes (  &core:UcoThing_tes ;
+             rdf:type [ core:UcoThing ] ? ;
+             core:createdBy @linkml:String ? ;
+             dcterms:description @linkml:String * ;
+             core:externalReference @linkml:String * ;
+             core:hasFacet @linkml:String * ;
+             core:modifiedTime @linkml:Datetime * ;
+             rdfs:label @linkml:String ? ;
+             core:objectMarking @core:MarkingDefinitionAbstraction * ;
+             core:objectCreatedTime @linkml:Datetime ? ;
+             core:specVersion @linkml:String ? ;
+             core:tag @linkml:String *
+          ) ;
+          rdf:type [ core:UcoObject ] ?
+       )
+    } OR @action:Action OR @core:Assertion OR @core:AttributedName OR @core:Compilation OR @core:ControlledVocabulary OR
+    @core:IdentityAbstraction OR @core:Item OR @location:Location OR @core:MarkingDefinitionAbstraction OR @core:ModusOperandi OR
+    @pattern:Pattern OR @core:Relationship
+)
+
+core:UcoThing  (
+    @core:UcoInherentCharacterizationThing OR @core:UcoObject
+)
+
+core:UcoThing_struct {
+    (  $core:UcoThing_tes rdf:type . * ;
+       rdf:type [ core:UcoThing ] ?
+    )
+}
+
+

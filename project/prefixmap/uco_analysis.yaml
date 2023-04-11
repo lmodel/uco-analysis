@@ -1,0 +1,189 @@
+{
+   "AFC": "http://purl.allotrope.org/ontologies/common#AFC_",
+   "BFO": "http://purl.obolibrary.org/obo/BFO_",
+   "CSO": "https://cso.kmi.open.ac.uk/topics/",
+   "EFO": "http://identifiers.org/efo/",
+   "ERO": "http://purl.obolibrary.org/obo/ERO_",
+   "GSSO": "http://purl.obolibrary.org/obo/GSSO_",
+   "IAO": "http://purl.obolibrary.org/obo/IAO_",
+   "NCIT": "http://purl.obolibrary.org/obo/NCIT_",
+   "REPR": "https://w3id.org/reproduceme#",
+   "SEPIO": "http://purl.obolibrary.org/obo/SEPIO_",
+   "SIO": "http://identifiers.org/sio/",
+   "SWO": "http://purl.obolibrary.org/obo/SWO_",
+   "WIKIDATA": "http://identifiers.org/wikidata/",
+   "action": "https://w3id.org/lmodel/uco-action/",
+   "analysis": "https://w3id.org/lmodel/uco-analysis/",
+   "co": "http://purl.org/co/",
+   "collections": "https://w3id.org/lmodel/collections/",
+   "core": "https://w3id.org/lmodel/uco-core/",
+   "csrc": "https://csrc.nist.gov/glossary/term/",
+   "dcid": "https://datacommons.org/browser/",
+   "dcterms": "http://purl.org/dc/terms/",
+   "edam.data": "http://edamontology.org/data_",
+   "gr": "http://purl.org/goodrelations/v1#",
+   "linkml": "https://w3id.org/linkml/",
+   "lm_core": "https://w3id.org/lmodel/core/",
+   "location": "https://w3id.org/lmodel/uco-location/",
+   "om": "http://www.ontology-of-units-of-measure.org/resource/om-2/",
+   "owl": "http://www.w3.org/2002/07/owl#",
+   "pattern": "https://w3id.org/lmodel/uco-pattern/",
+   "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+   "schema": "http://schema.org/",
+   "schema_collections": "https://w3id.org/lmodel/collections/schema/",
+   "schema_uco_action": "https://w3id.org/lmodel/uco-action/schema/",
+   "schema_uco_core": "https://w3id.org/lmodel/uco-core/schema/",
+   "schema_uco_location": "https://w3id.org/lmodel/uco-location/schema/",
+   "schema_uco_pattern": "https://w3id.org/lmodel/uco-pattern/schema/",
+   "schema_uco_types": "https://w3id.org/lmodel/uco-types/schema/",
+   "schema_uco_vocabulary": "https://w3id.org/lmodel/uco-vocabulary/schema/",
+   "skos": "http://www.w3.org/2004/02/skos/core#",
+   "sumo": "https://w3id.org/sumo/kb/",
+   "types": "https://w3id.org/lmodel/uco-types/",
+   "vocabulary": "https://w3id.org/lmodel/uco-vocabulary/",
+   "wikidata": "http://identifiers.org/wikidata/",
+   "Action": {
+      "@id": "action:Action"
+   },
+   "ActionArgumentFacet": {
+      "@id": "action:ActionArgumentFacet"
+   },
+   "ActionEstimationFacet": {
+      "@id": "action:ActionEstimationFacet"
+   },
+   "ActionFrequencyFacet": {
+      "@id": "action:ActionFrequencyFacet"
+   },
+   "ActionLifecycle": {
+      "@id": "action:ActionLifecycle"
+   },
+   "ActionPattern": {
+      "@id": "action:ActionPattern"
+   },
+   "Annotation": {
+      "@id": "core:Annotation"
+   },
+   "ArrayOfAction": {
+      "@id": "action:ArrayOfAction"
+   },
+   "Assertion": {
+      "@id": "core:Assertion"
+   },
+   "AttributedName": {
+      "@id": "core:AttributedName"
+   },
+   "Bag": {
+      "@id": "collections:Bag"
+   },
+   "Bundle": {
+      "@id": "core:Bundle"
+   },
+   "CoItem": {
+      "@id": "collections:CoItem"
+   },
+   "Collection": {
+      "@id": "collections:Collection"
+   },
+   "Compilation": {
+      "@id": "core:Compilation"
+   },
+   "ConfidenceFacet": {
+      "@id": "core:ConfidenceFacet"
+   },
+   "ContextualCompilation": {
+      "@id": "core:ContextualCompilation"
+   },
+   "ControlledDictionary": {
+      "@id": "types:ControlledDictionary"
+   },
+   "ControlledDictionaryEntry": {
+      "@id": "types:ControlledDictionaryEntry"
+   },
+   "ControlledVocabulary": {
+      "@id": "core:ControlledVocabulary"
+   },
+   "Dictionary": {
+      "@id": "types:Dictionary"
+   },
+   "DictionaryEntry": {
+      "@id": "types:DictionaryEntry"
+   },
+   "EnclosingCompilation": {
+      "@id": "core:EnclosingCompilation"
+   },
+   "ExternalReference": {
+      "@id": "core:ExternalReference"
+   },
+   "Facet": {
+      "@id": "core:Facet"
+   },
+   "GPSCoordinatesFacet": {
+      "@id": "location:GPSCoordinatesFacet"
+   },
+   "Grouping": {
+      "@id": "core:Grouping"
+   },
+   "Hash": {
+      "@id": "types:Hash"
+   },
+   "IdentityAbstraction": {
+      "@id": "core:IdentityAbstraction"
+   },
+   "Item": {
+      "@id": "core:Item"
+   },
+   "LatLongCoordinatesFacet": {
+      "@id": "location:LatLongCoordinatesFacet"
+   },
+   "List": {
+      "@id": "collections:List"
+   },
+   "ListItem": {
+      "@id": "collections:ListItem"
+   },
+   "Location": {
+      "@id": "location:Location"
+   },
+   "LogicalPattern": {
+      "@id": "pattern:LogicalPattern"
+   },
+   "MarkingDefinitionAbstraction": {
+      "@id": "core:MarkingDefinitionAbstraction"
+   },
+   "ModusOperandi": {
+      "@id": "core:ModusOperandi"
+   },
+   "Pattern": {
+      "@id": "pattern:Pattern"
+   },
+   "PatternExpression": {
+      "@id": "pattern:PatternExpression"
+   },
+   "Relationship": {
+      "@id": "core:Relationship"
+   },
+   "Set": {
+      "@id": "collections:Set"
+   },
+   "SimpleAddressFacet": {
+      "@id": "location:SimpleAddressFacet"
+   },
+   "Thing": {
+      "@id": "collections:Thing"
+   },
+   "Thread": {
+      "@id": "types:Thread"
+   },
+   "ThreadItem": {
+      "@id": "collections:CoItem"
+   },
+   "UcoInherentCharacterizationThing": {
+      "@id": "core:UcoInherentCharacterizationThing"
+   },
+   "UcoObject": {
+      "@id": "core:UcoObject"
+   },
+   "UcoThing": {
+      "@id": "core:UcoThing"
+   }
+}

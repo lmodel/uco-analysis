@@ -1,0 +1,134 @@
+---
+id: https://w3id.org/linkmodel/uco-analysis
+name: uco-analysis
+title: Uco Analysis
+description: >-
+  This ontology defines classes and properties for characterizing analytic analysiss and results.
+license: https://www.apache.org/licenses/LICENSE-2.0
+
+version: 1.1.0  # sync with primary git repo release tag
+
+## ------------
+##
+## PREFIXES
+## ------------
+# CURIE namespaces (prefixes/base URI's) mappings of prefixes used in the body of
+# the UCOLink Model specification are resolved using a specific precedence order,
+# for use in the generation of the UCOLink Model context.jsonld mappings to
+# namespaces. Any prefixes encountered in the UCOLink Model but not resolved by
+# the following precedence sources, are anonymously declared by linkml as
+# http://example.org/UNKNOWN/ rooted base URI's which should ideally be repaired
+# in one of the precedence lists.
+#
+# 1. The following 'prefixes:' delimited list has first precedence in resolution.
+
+prefixes:
+  linkml: 'https://w3id.org/linkml/'
+
+  analysis: 'https://w3id.org/lmodel/uco-analysis/'
+  schema_uco_action: 'https://w3id.org/lmodel/uco-action/schema/'
+  schema_uco_core: 'https://w3id.org/lmodel/uco-core/schema/'
+  schema_uco_pattern: 'https://w3id.org/lmodel/uco-pattern/schema/'
+  schema_uco_location: 'https://w3id.org/lmodel/uco-location/schema/'
+  schema_uco_types: 'https://w3id.org/lmodel/uco-types/schema/'
+  schema_uco_vocabulary: 'https://w3id.org/lmodel/uco-vocabulary/schema/'
+  schema_collections: 'https://w3id.org/lmodel/collections/schema/'
+
+default_prefix: analysis
+default_range: string
+
+## ------------
+## SUBSETS
+## ------------
+subsets: {}
+
+
+## ------------
+## TYPES
+## ------------
+imports:
+  - linkml:types
+  - schema_uco_action:uco_action
+  - schema_uco_core:uco_core
+
+types: {}
+
+## ------------
+## ENUMS
+## ------------
+enums: {}
+
+## ------------
+## SLOTS
+## ------------
+slots:
+
+  class:
+    description: >-
+      "A specific classification class."
+
+  classification:
+    description: >-
+      "An asserted classification of an analyzed artifact resulting from the analysis."
+    range: ArtifactClassification
+
+  classificationConfidence:
+    description: >-
+      "The level of confidence that a classification assertion is correct."
+    range: decimal type
+
+  originatingAnalysis:
+    description: >-
+      "The analysis action that resulted in an analytic result."
+    range: Analysis
+
+  resultContent:
+    description: >-
+      "Structured content expressing the results of an analysis action."
+    range: UcoObject
+
+## ------------
+## CLASSES
+## ------------
+classes:
+
+  Analysis:
+    is_a: Action
+    description: >-
+      "An analysis is an action of detailed examination of something in order to understand its nature, context or essential features."
+
+  AnalyticResult:
+    is_a: Assertion
+    description: >-
+      "An analytic result is a characterization of the understanding resulting from an analysis action."
+    slots:
+      - originatingAnalysis
+      - resultContent
+    slot_usage:
+      resultContent:
+        multivalued: true
+
+  AnalyticResultFacet:
+    is_a: Facet
+    description: >-
+      "An analytic result facet is a grouping of characteristics unique to the results of an analysis action."
+
+  ArtifactClassification:
+    is_a: UcoInherentCharacterizationThing
+    description: >-
+      "An artifact classification is a single specific assertion that a particular class of a classification taxonomy applies to something."
+    slots:
+      - classificationConfidence
+      - class
+
+  ArtifactClassificationResultFacet:
+    is_a: AnalyticResultFacet
+    description: >-
+      "An artifact classification result facet is a grouping of characteristics unique to the results of an artifact classification analysis action."
+    slots:
+      - classification
+    slot_usage:
+      classification:
+        multivalued: true
+
+...
