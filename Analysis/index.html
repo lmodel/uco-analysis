@@ -488,7 +488,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/linkmodel/uco-analysis</li>
+<li>from schema: https://w3id.org/lmodel/uco-analysis</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -516,7 +516,7 @@
 <pre><code class="language-yaml">name: Analysis
 description: '"An analysis is an action of detailed examination of something in order
   to understand its nature, context or essential features."'
-from_schema: https://w3id.org/linkmodel/uco-analysis
+from_schema: https://w3id.org/lmodel/uco-analysis
 rank: 1000
 is_a: Action
 
@@ -527,7 +527,7 @@ is_a: Action
 <pre><code class="language-yaml">name: Analysis
 description: '"An analysis is an action of detailed examination of something in order
   to understand its nature, context or essential features."'
-from_schema: https://w3id.org/linkmodel/uco-analysis
+from_schema: https://w3id.org/lmodel/uco-analysis
 rank: 1000
 is_a: Action
 attributes:
@@ -535,7 +535,7 @@ attributes:
     name: subaction
     description: '"References to other actions that make up part of a larger more
       complex action."'
-    from_schema: https://w3id.org/linkmodel/uco-action
+    from_schema: https://w3id.org/lmodel/uco-action
     multivalued: true
     alias: subaction
     owner: Analysis
@@ -545,7 +545,7 @@ attributes:
   environment:
     name: environment
     description: '"The environment wherein an action occurs."'
-    from_schema: https://w3id.org/linkmodel/uco-action
+    from_schema: https://w3id.org/lmodel/uco-action
     alias: environment
     owner: Analysis
     domain_of:
@@ -554,7 +554,7 @@ attributes:
   performer:
     name: performer
     description: '"The primary performer of an action."'
-    from_schema: https://w3id.org/linkmodel/uco-action
+    from_schema: https://w3id.org/lmodel/uco-action
     alias: performer
     owner: Analysis
     domain_of:
@@ -564,7 +564,7 @@ attributes:
     name: error
     description: '"A characterization of the differences between the expected and
       the actual performance of the action."'
-    from_schema: https://w3id.org/linkmodel/uco-action
+    from_schema: https://w3id.org/lmodel/uco-action
     multivalued: true
     alias: error
     owner: Analysis
@@ -575,7 +575,7 @@ attributes:
   instrument:
     name: instrument
     description: '"The things used to perform an action."'
-    from_schema: https://w3id.org/linkmodel/uco-action
+    from_schema: https://w3id.org/lmodel/uco-action
     multivalued: true
     alias: instrument
     owner: Analysis
@@ -598,7 +598,7 @@ attributes:
   participant:
     name: participant
     description: '"The supporting (non-primary) performers of an action."'
-    from_schema: https://w3id.org/linkmodel/uco-action
+    from_schema: https://w3id.org/lmodel/uco-action
     multivalued: true
     alias: participant
     owner: Analysis
@@ -608,7 +608,7 @@ attributes:
   result:
     name: result
     description: '"The things resulting from performing an action."'
-    from_schema: https://w3id.org/linkmodel/uco-action
+    from_schema: https://w3id.org/lmodel/uco-action
     multivalued: true
     alias: result
     owner: Analysis
@@ -618,7 +618,7 @@ attributes:
   location:
     name: location
     description: '"The locations where an action occurs."'
-    from_schema: https://w3id.org/linkmodel/uco-action
+    from_schema: https://w3id.org/lmodel/uco-action
     multivalued: true
     alias: location
     owner: Analysis
@@ -650,7 +650,7 @@ attributes:
   actionCount:
     name: actionCount
     description: '"The number of times that the action was performed."'
-    from_schema: https://w3id.org/linkmodel/uco-action
+    from_schema: https://w3id.org/lmodel/uco-action
     alias: actionCount
     owner: Analysis
     domain_of:
@@ -660,7 +660,7 @@ attributes:
   actionStatus:
     name: actionStatus
     description: '"The current state of the action."'
-    from_schema: https://w3id.org/linkmodel/uco-action
+    from_schema: https://w3id.org/lmodel/uco-action
     is_a: ActionStatusTypeVocab
     alias: actionStatus
     owner: Analysis
