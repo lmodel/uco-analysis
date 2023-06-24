@@ -2,7 +2,7 @@
   "name": "uco-analysis",
   "description": "This ontology defines classes and properties for characterizing analytic analysiss and results.",
   "title": "Uco Analysis",
-  "id": "https://w3id.org/linkmodel/uco-analysis",
+  "id": "https://w3id.org/lmodel/uco-analysis",
   "version": "1.1.0",
   "imports": [
     "linkml:types",
@@ -148,7 +148,7 @@
         "schema:Time"
       ],
       "base": "XSDTime",
-      "uri": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "uri": "http://www.w3.org/2001/XMLSchema#time",
       "repr": "str",
       "@type": "TypeDefinition"
     },
@@ -255,7 +255,7 @@
       "definition_uri": "https://w3id.org/linkml/Objectidentifier",
       "description": "A URI or CURIE that represents an object in the model.",
       "comments": [
-        "Used for inheritence and type checking"
+        "Used for inheritance and type checking"
       ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
@@ -272,6 +272,42 @@
       "imported_from": "linkml:types",
       "base": "NodeIdentifier",
       "uri": "http://www.w3.org/ns/shex#nonLiteral",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "jsonpointer",
+      "definition_uri": "https://w3id.org/linkml/Jsonpointer",
+      "conforms_to": "https://datatracker.ietf.org/doc/html/rfc6901",
+      "description": "A string encoding a JSON Pointer. The value of the string MUST conform to JSON Point syntax and SHOULD dereference to a valid object within the current instance document when encoded in tree form.",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "jsonpath",
+      "definition_uri": "https://w3id.org/linkml/Jsonpath",
+      "conforms_to": "https://www.ietf.org/archive/id/draft-goessner-dispatch-jsonpath-00.html",
+      "description": "A string encoding a JSON Path. The value of the string MUST conform to JSON Point syntax and SHOULD dereference to zero or more valid objects within the current instance document when encoded in tree form.",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "sparqlpath",
+      "definition_uri": "https://w3id.org/linkml/Sparqlpath",
+      "conforms_to": "https://www.w3.org/TR/sparql11-query/#propertypaths",
+      "description": "A string encoding a SPARQL Property Path. The value of the string MUST conform to SPARQL syntax and SHOULD dereference to zero or more valid objects within the current instance document when encoded as RDF.",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
       "repr": "str",
       "@type": "TypeDefinition"
     },
@@ -3024,7 +3060,7 @@
       "name": "class",
       "definition_uri": "https://w3id.org/lmodel/uco-analysis/class",
       "description": "\"A specific classification class.\"",
-      "from_schema": "https://w3id.org/linkmodel/uco-analysis",
+      "from_schema": "https://w3id.org/lmodel/uco-analysis",
       "slot_uri": "https://w3id.org/lmodel/uco-analysis/class",
       "owner": "ArtifactClassification",
       "domain_of": [
@@ -3037,7 +3073,7 @@
       "name": "classification",
       "definition_uri": "https://w3id.org/lmodel/uco-analysis/classification",
       "description": "\"An asserted classification of an analyzed artifact resulting from the analysis.\"",
-      "from_schema": "https://w3id.org/linkmodel/uco-analysis",
+      "from_schema": "https://w3id.org/lmodel/uco-analysis",
       "slot_uri": "https://w3id.org/lmodel/uco-analysis/classification",
       "owner": "ArtifactClassificationResultFacet",
       "domain_of": [
@@ -3051,7 +3087,7 @@
       "name": "classificationConfidence",
       "definition_uri": "https://w3id.org/lmodel/uco-analysis/classificationConfidence",
       "description": "\"The level of confidence that a classification assertion is correct.\"",
-      "from_schema": "https://w3id.org/linkmodel/uco-analysis",
+      "from_schema": "https://w3id.org/lmodel/uco-analysis",
       "slot_uri": "https://w3id.org/lmodel/uco-analysis/classificationConfidence",
       "owner": "ArtifactClassification",
       "domain_of": [
@@ -3064,7 +3100,7 @@
       "name": "originatingAnalysis",
       "definition_uri": "https://w3id.org/lmodel/uco-analysis/originatingAnalysis",
       "description": "\"The analysis action that resulted in an analytic result.\"",
-      "from_schema": "https://w3id.org/linkmodel/uco-analysis",
+      "from_schema": "https://w3id.org/lmodel/uco-analysis",
       "slot_uri": "https://w3id.org/lmodel/uco-analysis/originatingAnalysis",
       "owner": "AnalyticResult",
       "domain_of": [
@@ -3078,7 +3114,7 @@
       "name": "resultContent",
       "definition_uri": "https://w3id.org/lmodel/uco-analysis/resultContent",
       "description": "\"Structured content expressing the results of an analysis action.\"",
-      "from_schema": "https://w3id.org/linkmodel/uco-analysis",
+      "from_schema": "https://w3id.org/lmodel/uco-analysis",
       "slot_uri": "https://w3id.org/lmodel/uco-analysis/resultContent",
       "owner": "AnalyticResult",
       "domain_of": [
@@ -5499,7 +5535,7 @@
       "name": "AnalyticResult_resultContent",
       "definition_uri": "https://w3id.org/lmodel/uco-analysis/resultContent",
       "description": "\"Structured content expressing the results of an analysis action.\"",
-      "from_schema": "https://w3id.org/linkmodel/uco-analysis",
+      "from_schema": "https://w3id.org/lmodel/uco-analysis",
       "is_a": "resultContent",
       "domain": "AnalyticResult",
       "slot_uri": "https://w3id.org/lmodel/uco-analysis/resultContent",
@@ -5519,7 +5555,7 @@
       "name": "ArtifactClassificationResultFacet_classification",
       "definition_uri": "https://w3id.org/lmodel/uco-analysis/classification",
       "description": "\"An asserted classification of an analyzed artifact resulting from the analysis.\"",
-      "from_schema": "https://w3id.org/linkmodel/uco-analysis",
+      "from_schema": "https://w3id.org/lmodel/uco-analysis",
       "is_a": "classification",
       "domain": "ArtifactClassificationResultFacet",
       "slot_uri": "https://w3id.org/lmodel/uco-analysis/classification",
@@ -7403,7 +7439,7 @@
       "name": "Analysis",
       "definition_uri": "https://w3id.org/lmodel/uco-analysis/Analysis",
       "description": "\"An analysis is an action of detailed examination of something in order to understand its nature, context or essential features.\"",
-      "from_schema": "https://w3id.org/linkmodel/uco-analysis",
+      "from_schema": "https://w3id.org/lmodel/uco-analysis",
       "is_a": "Action",
       "slots": [
         "UcoObject_createdBy",
@@ -7438,7 +7474,7 @@
       "name": "AnalyticResult",
       "definition_uri": "https://w3id.org/lmodel/uco-analysis/AnalyticResult",
       "description": "\"An analytic result is a characterization of the understanding resulting from an analysis action.\"",
-      "from_schema": "https://w3id.org/linkmodel/uco-analysis",
+      "from_schema": "https://w3id.org/lmodel/uco-analysis",
       "is_a": "Assertion",
       "slots": [
         "UcoObject_createdBy",
@@ -7463,7 +7499,7 @@
       "name": "AnalyticResultFacet",
       "definition_uri": "https://w3id.org/lmodel/uco-analysis/AnalyticResultFacet",
       "description": "\"An analytic result facet is a grouping of characteristics unique to the results of an analysis action.\"",
-      "from_schema": "https://w3id.org/linkmodel/uco-analysis",
+      "from_schema": "https://w3id.org/lmodel/uco-analysis",
       "is_a": "Facet",
       "slot_usage": {},
       "class_uri": "https://w3id.org/lmodel/uco-analysis/AnalyticResultFacet",
@@ -7473,7 +7509,7 @@
       "name": "ArtifactClassification",
       "definition_uri": "https://w3id.org/lmodel/uco-analysis/ArtifactClassification",
       "description": "\"An artifact classification is a single specific assertion that a particular class of a classification taxonomy applies to something.\"",
-      "from_schema": "https://w3id.org/linkmodel/uco-analysis",
+      "from_schema": "https://w3id.org/lmodel/uco-analysis",
       "is_a": "UcoInherentCharacterizationThing",
       "slots": [
         "classificationConfidence",
@@ -7487,7 +7523,7 @@
       "name": "ArtifactClassificationResultFacet",
       "definition_uri": "https://w3id.org/lmodel/uco-analysis/ArtifactClassificationResultFacet",
       "description": "\"An artifact classification result facet is a grouping of characteristics unique to the results of an artifact classification analysis action.\"",
-      "from_schema": "https://w3id.org/linkmodel/uco-analysis",
+      "from_schema": "https://w3id.org/lmodel/uco-analysis",
       "is_a": "AnalyticResultFacet",
       "slots": [
         "ArtifactClassificationResultFacet_classification"
@@ -8596,9 +8632,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "uco_analysis.yaml",
-  "source_file_date": "2023-04-11T23:31:10",
-  "source_file_size": 3843,
-  "generation_date": "2023-04-11T23:31:32",
+  "source_file_date": "2023-06-25T00:08:00",
+  "source_file_size": 3840,
+  "generation_date": "2023-06-25T00:10:23",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/uco_analysis.context.jsonld",

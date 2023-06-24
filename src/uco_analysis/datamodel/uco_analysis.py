@@ -1,8 +1,8 @@
 # Auto generated from uco_analysis.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-04-11T23:32:43
+# Generation date: 2023-06-25T00:11:59
 # Schema: uco-analysis
 #
-# id: https://w3id.org/linkmodel/uco-analysis
+# id: https://w3id.org/lmodel/uco-analysis
 # description: This ontology defines classes and properties for characterizing analytic analysiss and results.
 # license: https://www.apache.org/licenses/LICENSE-2.0
 
